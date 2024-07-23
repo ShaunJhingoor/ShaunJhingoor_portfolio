@@ -48,9 +48,11 @@ export default function Home() {
       ) : (
         <>
           <NavBar />
+          <section id="about">
           <LampDemo />
+          </section>
           <section id="projects" className="section projects bg-[#020617]">
-          <h2 className="section__title text-4xl font-bold mb-8 text-center text-white border-b-4 border-blue-800 pb-4">
+          <h2 className="section__title text-4xl font-bold mb-8 text-center text-white  pb-4">
             Projects
           </h2>
 
@@ -67,13 +69,13 @@ export default function Home() {
                   rotateY={0}
                 >
                   <div className="relative w-full h-48">
-                    <div className="absolute inset-0 overflow-hidden" >
+                    <div className="absolute inset-0 overflow-hidden rounded-lg">
                       <Image
                         src={cell}
                         alt="A description of the image"
                         layout="fill"
                         objectFit="cover"
-                        className="transition-transform duration-300 ease-out transform hover:scale-110"
+                        className="transition-transform duration-300 ease-out transform hover:scale-120"
                       />
                     </div>
                   </div>
@@ -118,7 +120,7 @@ export default function Home() {
                   rotateY={0}
                 >
                   <div className="relative w-full h-48">
-                    <div className="absolute inset-0 overflow-hidden" >
+                    <div className="absolute inset-0 overflow-hidden rounded-lg" >
                       <Image
                         src={allAdventure}
                         alt="A description of the image"
@@ -175,7 +177,7 @@ export default function Home() {
                   rotateY={0}
                 >
                   <div className="relative w-full h-48">
-                    <div className="absolute inset-0 overflow-hidden" >
+                    <div className="absolute inset-0 overflow-hidden rounded-lg" >
                       <Image
                         src={teamMates}
                         alt="A description of the image"

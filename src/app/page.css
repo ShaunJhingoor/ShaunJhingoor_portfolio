@@ -66,10 +66,15 @@
 }
 
 
+
+
 @media (max-width: 600px) {
   .project {
-    width: 80%;
-    margin-bottom: 50vh;
+    width: 90%;
+    margin-bottom: 40vh;
+  }
+  .projects{
+    margin-bottom: 100px;
   }
 }
 
