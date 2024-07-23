@@ -5,18 +5,20 @@ import { cn } from "../../lib/utils";
 import profile from "../../assets/image.png"
 import { useState } from "react";
 import { useEffect } from "react";
+import { ModalTrigger, ModalContent, Modal } from "./animated-modal";
+import resume from "../../assets/shaun.pdf"
 
 export function LampDemo() {
   
-    const [yValue, setYValue] = useState('-27.5vh');
+    const [yValue, setYValue] = useState('-20vh');
 
     
     useEffect(() => {
       const handleResize = () => {
         if (window.innerWidth < 600) {
-          setYValue('-3vh'); 
+          setYValue('5vh'); 
         } else {
-          setYValue('-27.5vh'); 
+          setYValue('-20vh'); 
         }
       };
   
@@ -67,6 +69,12 @@ export function LampDemo() {
     lineHeight: '1.75',
     
   }}>Innovative coding professional with Biology/Healthcare background. Demonstrated ability to meet deadlines consistently. Driven by determination; thrives under high-stress situations. Ready to commit to a company dedicated to helping others and provide advanced solutions.</p>
+   <div>
+      <Modal>
+        <ModalTrigger className="your-button-class">View Resume</ModalTrigger>
+        <ModalContent resumeUrl={resume} className="your-content-class" />
+      </Modal>
+    </div>
 
       </motion.p>
       
@@ -95,7 +103,7 @@ export const LampContainer = ({
           className
         )}
       >
-        <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 translate-y-[-3rem]"> {/* Adjusted translate-y to ensure better alignment */}
+        <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 translate-y-[-1rem]"> {/* Adjusted translate-y to ensure better alignment */}
           <motion.div
             initial={{ opacity: 0, width: "10rem" }} // Initial opacity and width for a more gradual reveal
             whileInView={{ opacity: 1, width: "30vw" }}
