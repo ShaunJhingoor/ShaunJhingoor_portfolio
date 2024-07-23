@@ -57,7 +57,7 @@ export function LampDemo() {
           }}
       >
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <img src={profile.src} alt="profile" style={{ width: '7.5rem', height: '7.5rem', borderRadius: '50%', alignSelf: 'center' }} />
+        <img src={profile.src} alt="profile" style={{ width: '7.5rem', height: '7.5rem', borderRadius: '50%', alignSelf: 'center', objectFit: "cover"}} />
         </div>
         Hi, I am Shaun Jhingoor. 
         <p style={{ 

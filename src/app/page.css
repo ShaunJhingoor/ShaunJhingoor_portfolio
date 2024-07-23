@@ -1,0 +1,52 @@
+.projects__grid {
+  max-width: 100vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  grid-gap: 0; 
+}
+
+.project { 
+  width: 85%; 
+  margin-bottom: 40vh;
+}
+
+#projectdetail{
+  height: 600px;
+
+  border-radius: 8px; /* Border radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+  transition: transform 0.3s ease-out; /* Transition for hover effect */
+  
+}
+
+
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.link--icon {
+  margin: 0 10px; 
+  font-size: 1.5rem; 
+  color: #ffffff; 
+  text-decoration: none; 
+}
+
+.link--icon i {
+  transition: transform 0.3s ease-in-out; /* Add a hover effect */
+}
+
+.link--icon:hover i {
+  transform: scale(1.2); /* Scale up the icon on hover */
+}
+
+
+
+
+
+
+
+  
