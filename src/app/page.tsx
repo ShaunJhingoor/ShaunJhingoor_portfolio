@@ -58,7 +58,7 @@ export default function Home() {
             <CardContainer containerClassName="mt-10">
               <CardBody className="project">
                 <CardItem
-                  className="bg-gray-800 text-white p-10"
+                  className="bg-gray-800 text-white p-10 text-center"
                   id="projectdetail"
                   translateX={0}
                   translateY={0}
@@ -79,6 +79,12 @@ export default function Home() {
                   </div>
                   <h2 className="text-xl font-semibold mt-4">Cell Explorer</h2>
                   <p className="mt-2">Cell Explorer is an interactive demo where users compare Eukaryotic and Prokaryotic cells. Organelles, the cell components, can be clicked on for information. Links below to view github repository and live site.</p>
+                  <div id="project__stack">
+                    <p id="project__stack-item">Canvas</p>
+                    <p id="project__stack-item">JavaScript</p>
+                    <p id="project__stack-item">CSS</p>
+                    <p id="project__stack-item">HTML</p>
+                  </div>
                   <div className="icon-container">
                   <a
                     href="https://github.com/ShaunJhingoor/JSproject"
@@ -103,7 +109,7 @@ export default function Home() {
             <CardContainer containerClassName="mt-10">
               <CardBody className="project">
                 <CardItem
-                  className="bg-gray-800 text-white p-10"
+                  className="bg-gray-800 text-white p-10 text-center"
                   id="projectdetail"
                   translateX={0}
                   translateY={0}
@@ -124,6 +130,18 @@ export default function Home() {
                   </div>
                   <h2 className="text-xl font-semibold mt-4">All Adventure</h2>
                   <p className="mt-2">All Adventure is a full stack application modeled off All Trails. Users are able to view trails all throughout New York on a interactive Google Map and zoom in on the trail of interest. Users can view and write reviews and ratings for a trail. Links below to view github repository and live site.</p>
+                  <div id="project__stack">
+                    <p id="project__stack-item">PostgreSQL</p>
+                    <p id="project__stack-item">Rails</p>
+                    <p id="project__stack-item">React</p>
+                    <p id="project__stack-item">Redux</p>
+                    <p id="project__stack-item">AWS S3</p>
+                    <p id="project__stack-item">Google Api</p>
+                    <p id="project__stack-item">JavaScript</p>
+                    <p id="project__stack-item">Ruby</p>
+                    <p id="project__stack-item">CSS</p>
+                    <p id="project__stack-item">HTML</p>
+                  </div>
                   <div className="icon-container">
                   <a
                     href="https://github.com/ShaunJhingoor/AllAdventure"
@@ -148,7 +166,7 @@ export default function Home() {
             <CardContainer containerClassName="mt-10">
               <CardBody className="project">
                 <CardItem
-                  className="bg-gray-800 text-white p-10"
+                  className="bg-gray-800 text-white p-10 text-center"
                   id="projectdetail"
                   translateX={0}
                   translateY={0}
@@ -168,7 +186,21 @@ export default function Home() {
                     </div>
                   </div>
                   <h2 className="text-xl font-semibold mt-4">Team Mates</h2>
-                  <p className="mt-2">Team Mates is a full stack application incorporating Google Maps. Completed in a team of four. Users can find or create sporting events by location, and filter by sport category, difficulty, and distance. Profiles can be created to indicate attendance and add friends. Links below to view github repository and live site..</p>
+                  <p className="mt-2">Team Mates is a full stack application incorporating Google Maps. Completed in a team of four. Users can find or create sporting events by location, and filter by sport category, difficulty, and distance. Profiles can be created to indicate attendance and add friends. Links below to view github repository and live site.</p>
+                   <div id="project__stack">
+                    <p id="project__stack-item">Mongo DB</p>
+                    <p id="project__stack-item">Mongoose.js</p>
+                    <p id="project__stack-item">Express</p>
+                    <p id="project__stack-item">React</p>
+                    <p id="project__stack-item">Redux</p>
+                    <p id="project__stack-item">Node.js</p>
+                    <p id="project__stack-item">React</p>
+                    <p id="project__stack-item">JavaScript</p>
+                    <p id="project__stack-item">AWS S3</p>
+                    <p id="project__stack-item">Google Api</p>
+                    <p id="project__stack-item">CSS</p>
+                    <p id="project__stack-item">HTML</p>
+                  </div>
                   <div className="icon-container">
                   <a
                     href="https://github.com/erklee/TeamMates"
