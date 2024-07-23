@@ -3,25 +3,70 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../lib/utils";
 import profile from "../../assets/image.png"
+import { useState } from "react";
+import { useEffect } from "react";
 
 export function LampDemo() {
-  return (
-    <LampContainer>
-       
-      <motion.p
-        initial={{ opacity: 0, y: 40 }} // Adjusted initial y value for better transition effect
-        whileInView={{ opacity: 1, y: -410 }}
+  
+    const [yValue, setYValue] = useState('-27.5vh');
+
+    
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth < 600) {
+          setYValue('-3vh'); 
+        } else {
+          setYValue('-27.5vh'); 
+        }
+      };
+  
+    
+      window.addEventListener('resize', handleResize);
+  
+     
+      handleResize();
+  
+      
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
+    return (
+      <LampContainer>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: yValue }} // Use state value for y
         transition={{
           delay: 0.3,
           duration: 1,
           ease: "easeInOut",
         }}
-        className="mt-2 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-6xl translate-y-[-20vh]"  // Further adjusted translate-y value to move text closer
+        style={{
+            marginBottom: '-10rem', // Equivalent to mt-2
+            marginTop: '2rem',
+            background: 'linear-gradient(to bottom right, #ffffff, #f3f4f6)', // Light gradient colors from white to very light gray
+            padding: '1rem', // Equivalent to py-4
+            backgroundClip: 'text',
+            textAlign: 'center',
+            fontSize: '2.25rem', // Equivalent to text-4xl (36px)
+            fontWeight: '500', // Equivalent to font-medium
+            letterSpacing: '-0.015em', // Equivalent to tracking-tight
+            color: 'transparent',
+            
+          }}
       >
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <img src={profile.src} alt="profile" style={{ width: '8rem', height: '8rem', borderRadius: '50%', alignSelf: 'center' }} />
+        <img src={profile.src} alt="profile" style={{ width: '7.5rem', height: '7.5rem', borderRadius: '50%', alignSelf: 'center' }} />
         </div>
         Hi, I am Shaun Jhingoor. 
+        <p style={{ 
+    fontSize: '1.2rem', 
+    marginTop: '1rem', 
+    maxWidth: '600px', 
+    marginLeft: 'auto', 
+    marginRight: 'auto', 
+    lineHeight: '1.75',
+    
+  }}>Innovative coding professional with Biology/Healthcare background. Demonstrated ability to meet deadlines consistently. Driven by determination; thrives under high-stress situations. Ready to commit to a company dedicated to helping others and provide advanced solutions.</p>
 
       </motion.p>
       
@@ -50,7 +95,7 @@ export const LampContainer = ({
           className
         )}
       >
-        <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 translate-y-[-10rem]"> {/* Adjusted translate-y to ensure better alignment */}
+        <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 translate-y-[-3rem]"> {/* Adjusted translate-y to ensure better alignment */}
           <motion.div
             initial={{ opacity: 0, width: "10rem" }} // Initial opacity and width for a more gradual reveal
             whileInView={{ opacity: 1, width: "30vw" }}
