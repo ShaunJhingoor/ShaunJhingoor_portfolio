@@ -52,7 +52,7 @@
   #hobbiesdescription{
     margin-left: 1rem;
     margin-right: 1rem;
-    
+    color: white
   }
   #imageHobbies{
     margin: 0 auto;
@@ -61,6 +61,7 @@
 
   #hobbiesTitle{
     font-size: 2rem;
+    color: white;
   }
 
   @keyframes blueShimmer {
