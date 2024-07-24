@@ -236,10 +236,6 @@ export default function Home() {
                 </CardItem>
               </CardBody>
             </CardContainer>
-
-
-
-        
           </div>
         </section>
         <section id="skills" className="section skills bg-[#020617] h-[20rem]">
