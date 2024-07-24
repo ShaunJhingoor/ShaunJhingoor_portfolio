@@ -46,7 +46,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(false);
-    }, 5000); // Show the popup for 5 seconds
+    }, 5000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -56,15 +56,16 @@ export default function Home() {
       {showPopup ? (
         <Popup />
       ) : (
-        <>
+        <div className="section main bg-[#020617]">
           <NavBar />
           <section id="about">
           <LampDemo />
           </section>
           <section id="projects" className="section projects bg-[#020617]">
-          <h2 className="section__title text-4xl font-bold mb-8 text-center text-white  pb-4">
+          <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
             Projects
           </h2>
+
 
           <div className="projects__grid">
             <CardContainer containerClassName="mt-10">
@@ -240,13 +241,33 @@ export default function Home() {
         
           </div>
         </section>
-        <section id="skills" className="section skills bg-[#020617]">
-        <h2 className="section__title text-4xl font-bold mb-8 text-center text-white  pb-1" id="skillsHeader">
-            Skills
+        <section id="skills" className="section skills bg-[#020617] h-[20rem]">
+        <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
+           Skills
           </h2>
           <InfiniteMovingCardsDemo/>
         </section>
-        </>
+        <section id="contact" className="section contact bg-[#020617] h-[12rem] mt-[4rem]" >
+        <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
+           Get in Touch
+        </h2>
+        <div className="flex justify-center space-x-6 ">
+          <a href="tel:{516-361-5945}" className="text-white text-4xl hover:text-gray-300">
+            <i className="fas fa-phone"></i>
+          </a>
+          <a href="https://github.com/ShaunJhingoor" className="text-white text-4xl hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shaun-jhingoor-10a50328a/" className="text-white text-4xl hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:Jhingoor1945@gmail.com" className="text-white text-4xl hover:text-gray-300">
+            <i className="fas fa-envelope"></i>
+          </a>
+        </div>
+
+        </section>
+        </div>
       )}
     </main>
   );

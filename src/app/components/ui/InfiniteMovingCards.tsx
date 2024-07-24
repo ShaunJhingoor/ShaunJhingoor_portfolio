@@ -62,7 +62,7 @@ export function InfiniteMovingCardsDemo() {
   ];
 
   return (
-    <div className="h-[20rem] rounded-sm flex flex-col antialiased bg-[#020617] items-center justify-center relative overflow-hidden">
+    <div className=" rounded-sm flex flex-col antialiased bg-[#020617] items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards
         items={items}
         direction="right"
