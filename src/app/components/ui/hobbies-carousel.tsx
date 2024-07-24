@@ -83,7 +83,7 @@ const Carousel: React.FC = () => {
 
   return (
     <section id="hobbies">
-      <h2 className={styles.sectionTitle}>Hobbies</h2>
+      <h2 className="sectionTitle text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">Hobbies</h2>
       <div className={styles.carouselContainer}>
         <div className={styles.carousel} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {items.map((item, index) => (
