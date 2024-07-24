@@ -1,0 +1,95 @@
+/* components/Carousel.module.css */
+.carouselContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    max-width: 600px;
+  }
+  
+  .carouselItem {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+    background-color: #2a394f;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .carouselControl {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #2a394f;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  #hobbiesdescription{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+  }
+  #imageHobbies{
+    margin: 0 auto;
+    filter: invert(100%) brightness(100%);
+  }
+
+  #hobbiesTitle{
+    font-size: 2rem;
+  }
+
+  @keyframes blueShimmer {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  @keyframes blueShimmer {
+    0% {
+      color: #4682b4; 
+    }
+    50% {
+      color: #87ceeb; 
+    }
+    100% {
+      color: #4682b4; 
+    }
+  }
+
+  .link{
+    position: relative; 
+    text-decoration: none; 
+    color: #4682b4;
+    animation: blueShimmer 1.5s infinite; 
+  }
+
+
+  

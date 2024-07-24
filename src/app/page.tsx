@@ -13,6 +13,7 @@ import allAdventure from "./assets/allAdventure.png"
 import teamMates from "./assets/teamMates.png"
 import"./page.css"
 import { InfiniteMovingCardsDemo } from "./components/ui/InfiniteMovingCards";
+import Carousel from "./components/ui/hobbies-carousel";
 
 const Popup = () => {
   return (
@@ -247,6 +248,9 @@ export default function Home() {
           </h2>
           <InfiniteMovingCardsDemo/>
         </section>
+        <section>
+          <Carousel/>
+        </section>
         <section id="contact" className="section contact bg-[#020617] h-[12rem] mt-[4rem]" >
         <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
            Get in Touch
@@ -267,6 +271,7 @@ export default function Home() {
         </div>
 
         </section>
+       
         </div>
       )}
     </main>
