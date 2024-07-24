@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import NavBar from "./components/ui/navbar-menu";
 import SparklesCore  from "./components/ui/Sparkles";
 import { LampDemo } from "./components/ui/lamp";

@@ -9,76 +9,73 @@ import { ModalTrigger, ModalContent, Modal } from "./animated-modal";
 import resume from "../../assets/shaun.pdf"
 
 export function LampDemo() {
-  
-    const [yValue, setYValue] = useState('-20vh');
+  const [yValue, setYValue] = useState('-20vh');
 
-    
-    useEffect(() => {
-      const handleResize = () => {
-        if (window.innerWidth < 600) {
-          setYValue('5vh'); 
-        } else {
-          setYValue('-20vh'); 
-        }
-      };
-  
-    
-      window.addEventListener('resize', handleResize);
-  
-     
-      handleResize();
-  
-      
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
-  
-    return (
-      <LampContainer>
-        <motion.p
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: yValue }} // Use state value for y
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        setYValue('5vh');
+      } else {
+        setYValue('-20vh');
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Set initial value
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
+    <LampContainer>
+      <motion.p
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: yValue }}
         transition={{
           delay: 0.3,
           duration: 1,
           ease: "easeInOut",
         }}
         style={{
-            marginBottom: '-10rem', // Equivalent to mt-2
-            marginTop: '2rem',
-            background: 'linear-gradient(to bottom right, #ffffff, #f3f4f6)', // Light gradient colors from white to very light gray
-            padding: '1rem', // Equivalent to py-4
-            backgroundClip: 'text',
-            textAlign: 'center',
-            fontSize: '2.25rem', // Equivalent to text-4xl (36px)
-            fontWeight: '500', // Equivalent to font-medium
-            letterSpacing: '-0.015em', // Equivalent to tracking-tight
-            color: 'transparent',
-            
-          }}
+          marginBottom: '-10rem',
+          marginTop: '2rem',
+          background: 'linear-gradient(to bottom right, #ffffff, #f3f4f6)',
+          padding: '1rem',
+          backgroundClip: 'text',
+          textAlign: 'center',
+          fontSize: '2.25rem',
+          fontWeight: '500',
+          letterSpacing: '-0.015em',
+          color: 'transparent',
+        }}
       >
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <img src={profile.src} alt="profile" style={{ width: '7.5rem', height: '7.5rem', borderRadius: '50%', alignSelf: 'center', objectFit: "cover"}} />
+          <img
+            src={profile.src}
+            alt="profile"
+            style={{ width: '7.5rem', height: '7.5rem', borderRadius: '50%', alignSelf: 'center', objectFit: "cover" }}
+          />
         </div>
-        Hi, I am Shaun Jhingoor. 
-        <p style={{ 
-    fontSize: '1.2rem', 
-    marginTop: '1rem', 
-    maxWidth: '600px', 
-    marginLeft: 'auto', 
-    marginRight: 'auto', 
-    lineHeight: '1.75',
-    
-  }}>Innovative coding professional with Biology/Healthcare background. Demonstrated ability to meet deadlines consistently. Driven by determination; thrives under high-stress situations. Ready to commit to a company dedicated to helping others and provide advanced solutions.</p>
-   <div>
-      <Modal>
-        <ModalTrigger className="your-button-class">View Resume</ModalTrigger>
-        <ModalContent resumeUrl={resume} className="your-content-class" />
-      </Modal>
-    </div>
-
+        Hi, I am Shaun Jhingoor.
+        <p style={{
+          fontSize: '1.2rem',
+          marginTop: '1rem',
+          maxWidth: '600px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          lineHeight: '1.75',
+        }}>
+          Innovative coding professional with Biology/Healthcare background. Demonstrated ability to meet deadlines consistently. Driven by determination; thrives under high-stress situations. Ready to commit to a company dedicated to helping others and provide advanced solutions.
+        </p>
+        <div>
+          <Modal>
+            <ModalTrigger className="your-button-class" href="#about">
+              View Resume
+            </ModalTrigger>
+            <ModalContent resumeUrl={resume} className="your-content-class" />
+          </Modal>
+        </div>
       </motion.p>
-      
-
     </LampContainer>
   );
 }

@@ -39,24 +39,31 @@ export function Modal({ children }: { children: ReactNode }) {
   return <ModalProvider>{children}</ModalProvider>;
 }
 
-export const ModalTrigger = ({
-  children,
-  className,
-}: {
+interface ModalTriggerProps {
   children: ReactNode;
   className?: string;
+  href?: string; // Add href here
+}
+
+export const ModalTrigger: React.FC<ModalTriggerProps> = ({
+  children,
+  className,
+  href,
 }) => {
   const { setOpen } = useModal();
+
   return (
-    <button
+    <a
+      href={href} 
       className={cn(
         "px-4 py-2 text-sm rounded-lg text-white bg-[#003366] text-center relative overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300",
         className
       )}
-      onClick={() => setOpen(true)}
+      onClick={() => setOpen(true)} 
+      role="button" 
     >
       {children}
-    </button>
+    </a>
   );
 };
 
