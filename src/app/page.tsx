@@ -1,4 +1,5 @@
 "use client";
+import Head from "next/head";
 import NavBar from "./components/ui/navbar-menu";
 import SparklesCore  from "./components/ui/Sparkles";
 import { LampDemo } from "./components/ui/lamp";
@@ -14,6 +15,7 @@ import teamMates from "./assets/teamMates.png"
 import"./page.css"
 import { InfiniteMovingCardsDemo } from "./components/ui/InfiniteMovingCards";
 import Carousel from "./components/ui/hobbies-carousel";
+
 
 const Popup = () => {
   return (
@@ -54,6 +56,10 @@ export default function Home() {
 
   return (
     <main className="section main bg-[#020617]">
+      <Head>
+        <link rel="icon" href="./assets/FavIcon1.png" type="image/x-icon"/>
+        <meta name="description" content="Shaun's Portfolio" />
+      </Head>
       {showPopup ? (
         <Popup />
       ) : (
