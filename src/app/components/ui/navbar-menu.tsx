@@ -38,6 +38,7 @@ const NavBar = () => {
       <MenuItem setActive={setActive} active={active} item="About" href="#about" />
       <MenuItem setActive={setActive} active={active} item="Projects" href="#projects" />
       <MenuItem setActive={setActive} active={active} item="Skills" href="#skills" />
+      <MenuItem setActive={setActive} active={active} item="Hobbies" href="#Hobbies" />
       <MenuItem setActive={setActive} active={active} item="Contact" href="#contact" />
     </nav>
   );
