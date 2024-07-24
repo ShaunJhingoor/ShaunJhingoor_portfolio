@@ -1,10 +1,11 @@
 "use client";
 import NavBar from "./components/ui/navbar-menu";
-import SparklesCore from "./components/ui/Sparkles";
+import SparklesCore  from "./components/ui/Sparkles";
 import { LampDemo } from "./components/ui/lamp";
 import { useState } from "react";
 import { useEffect } from "react";
 import { CardContainer, CardBody, CardItem } from "./components/ui/3d-card";
+import { FlipWords } from "./components/ui/flip-word";
 import Image from "next/image";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import cell from "./assets/cellExplorer.png"
@@ -18,14 +19,22 @@ const Popup = () => {
     <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
       <SparklesCore
         background="#000000"
-        particleDensity={150}
+        particleDensity={50}
         minSize={1}
         maxSize={3}
-        speed={10}
-        className="fixed inset-0" // Ensures SparklesCore takes up the whole screen
+        speed={5}
+        
       />
-      <div className="absolute flex items-center justify-center inset-0">
-        <h1 className="text-4xl font-bold text-white">Welcome!</h1>
+       <div className="absolute flex items-center justify-center inset-0">
+        <div className="text-center">
+          
+        <FlipWords
+          words={['Welcome!']}
+          duration={1000}
+          className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg"
+        />
+
+        </div>
       </div>
     </div>
   );
