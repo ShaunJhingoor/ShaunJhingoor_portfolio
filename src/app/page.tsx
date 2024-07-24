@@ -11,6 +11,7 @@ import cell from "./assets/cellExplorer.png"
 import allAdventure from "./assets/allAdventure.png"
 import teamMates from "./assets/teamMates.png"
 import"./page.css"
+import { InfiniteMovingCardsDemo } from "./components/ui/InfiniteMovingCards";
 
 const Popup = () => {
   return (
@@ -42,7 +43,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="section main bg-[#020617]">
       {showPopup ? (
         <Popup />
       ) : (
@@ -229,6 +230,12 @@ export default function Home() {
 
         
           </div>
+        </section>
+        <section id="skills" className="section skills bg-[#020617]">
+        <h2 className="section__title text-4xl font-bold mb-8 text-center text-white  pb-1" id="skillsHeader">
+            Skills
+          </h2>
+          <InfiniteMovingCardsDemo/>
         </section>
         </>
       )}

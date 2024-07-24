@@ -1,4 +1,18 @@
 import type { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+
+const addVariablesForColors = ({ addBase, theme }: any) => {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+};
 
 const config: Config = {
   content: [
@@ -19,6 +33,7 @@ const config: Config = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         moveHorizontal: {
@@ -36,11 +51,13 @@ const config: Config = {
           "50%": { transform: "translateY(50%)" },
           "100%": { transform: "translateY(-50%)" },
         },
+        scroll: {
+          to: { transform: "translate(calc(-50% - 0.5rem))" },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 };
 
 export default config;
-
