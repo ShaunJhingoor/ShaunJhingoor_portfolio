@@ -79,7 +79,7 @@ interface ModalContentProps {
 }
 
 export const ModalContent: React.FC<ModalContentProps> = ({ resumeUrl, className }) => {
-  const { open } = useModal();
+  const { open, setOpen } = useModal();
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -92,6 +92,8 @@ export const ModalContent: React.FC<ModalContentProps> = ({ resumeUrl, className
       document.body.style.overflow = 'auto';
     }
   }, [open]);
+
+  useOutsideClick(modalRef, () => setOpen(false));
 
   return (
     <AnimatePresence>
