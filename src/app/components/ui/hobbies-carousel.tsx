@@ -23,7 +23,7 @@ const Carousel: React.FC = () => {
       title: 'Reading',
       description: (
         <>
-          I love diving into a good book. I am currently reading "You Shouldn't Have Come Here" by Jeneva Rose. Happy to talk about a good book anytime. My{' '}
+          I love diving into a good book. I am currently reading &quot;You Shouldn&apos;t Have Come Here&quot; by Jeneva Rose. Happy to talk about a good book anytime. My{' '}
           <a
             href="https://github.com/ShaunJhingoor"
             aria-label="github"

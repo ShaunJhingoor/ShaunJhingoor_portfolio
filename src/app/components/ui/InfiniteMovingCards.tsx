@@ -11,6 +11,7 @@ import python from "../../assets/python.png"
 import ruby from "../../assets/ruby.png"
 import AWS from "../../assets/aws.png"
 import rails from "../../assets/rails.png"
+import NextJs from "../../favicon.ico"
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -34,6 +35,10 @@ export function InfiniteMovingCardsDemo() {
     {
       src: postgres.src,
       name: "PostgresSQL",
+    },
+    {
+      src: NextJs.src,
+      name: "Next.js",
     },
     {
       src: typeScript.src,
