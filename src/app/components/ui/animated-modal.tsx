@@ -1,15 +1,9 @@
-"use client";
-import { cn } from "../../lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
-import React, {
-  ReactNode,
-  createContext,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useEffect, useRef } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { cn } from '../../lib/utils';
 
+// Modal Context and Provider
 interface ModalContextType {
   open: boolean;
   setOpen: (open: boolean) => void;
@@ -30,7 +24,7 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
 export const useModal = () => {
   const context = useContext(ModalContext);
   if (!context) {
-    throw new Error("useModal must be used within a ModalProvider");
+    throw new Error('useModal must be used within a ModalProvider');
   }
   return context;
 };
@@ -42,7 +36,7 @@ export function Modal({ children }: { children: ReactNode }) {
 interface ModalTriggerProps {
   children: ReactNode;
   className?: string;
-  href?: string; // Add href here
+  href?: string;
 }
 
 export const ModalTrigger: React.FC<ModalTriggerProps> = ({
@@ -52,15 +46,27 @@ export const ModalTrigger: React.FC<ModalTriggerProps> = ({
 }) => {
   const { setOpen } = useModal();
 
+  const handleClick = () => {
+    setOpen(true);
+
+    // Delay the scroll into view to allow the modal to be rendered
+    setTimeout(() => {
+      const modalElement = document.getElementById('modal');
+      if (modalElement) {
+        modalElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 100); // Adjust delay as needed
+  };
+
   return (
     <a
-      href={href} 
+      href={href}
       className={cn(
-        "px-4 py-2 text-sm rounded-lg text-white bg-[#003366] text-center relative overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300",
+        'px-4 py-2 text-sm rounded-lg text-white bg-[#003366] text-center relative overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300',
         className
       )}
-      onClick={() => setOpen(true)} 
-      role="button" 
+      onClick={handleClick}
+      role="button"
     >
       {children}
     </a>
@@ -74,66 +80,40 @@ interface ModalContentProps {
 
 export const ModalContent: React.FC<ModalContentProps> = ({ resumeUrl, className }) => {
   const { open } = useModal();
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
+      if (modalRef.current) {
+        modalRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto';
     }
   }, [open]);
-
-  const modalRef = useRef(null);
-  const { setOpen } = useModal();
-  useOutsideClick(modalRef, () => setOpen(false));
 
   return (
     <AnimatePresence>
       {open && (
         <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-            backdropFilter: "blur(10px)",
-          }}
-          exit={{
-            opacity: 0,
-            backdropFilter: "blur(0px)",
-          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, backdropFilter: 'blur(10px)' }}
+          exit={{ opacity: 0, backdropFilter: 'blur(0px)' }}
           className="fixed inset-0 flex items-center justify-center z-10000"
         >
           <Overlay />
-
           <motion.div
+            id="modal"
             ref={modalRef}
             className={cn(
-              "w-[100vw] h-[80vh] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 rounded-2xl relative z-50 flex flex-col overflow-hidden",
+              'w-[100vw] h-[80vh] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 rounded-2xl relative z-50 flex flex-col overflow-hidden',
               className
             )}
-            initial={{
-              opacity: 0,
-              scale: 0.5,
-              rotateX: 40,
-              y: 40,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              rotateX: 0,
-              y: 0,
-            }}
-            exit={{
-              opacity: 0,
-              scale: 0.8,
-              rotateX: 10,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 15,
-            }}
+            initial={{ opacity: 0, scale: 0.5, rotateX: 40, y: 40 }}
+            animate={{ opacity: 1, scale: 1, rotateX: 0, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, rotateX: 10 }}
+            transition={{ type: 'spring', stiffness: 260, damping: 15 }}
             style={{ top: '10%', transform: 'translateY(0)' }} // Adjust position here
           >
             <CloseIcon />
@@ -144,7 +124,7 @@ export const ModalContent: React.FC<ModalContentProps> = ({ resumeUrl, className
                 title="Resume Preview"
               />
             </div>
-            <div className="flex justify-center p-4 bg-gray-100 dark:bg-neutral-900">
+            <div className="flex justify-center p-2 bg-gray-100 dark:bg-neutral-900">
               <a
                 href={resumeUrl}
                 download="resume.pdf"
@@ -163,17 +143,9 @@ export const ModalContent: React.FC<ModalContentProps> = ({ resumeUrl, className
 const Overlay = ({ className }: { className?: string }) => {
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-        backdropFilter: "blur(10px)",
-      }}
-      exit={{
-        opacity: 0,
-        backdropFilter: "blur(0px)",
-      }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, backdropFilter: 'blur(10px)' }}
+      exit={{ opacity: 0, backdropFilter: 'blur(0px)' }}
       className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-50 ${className}`}
     ></motion.div>
   );
@@ -206,29 +178,25 @@ const CloseIcon = () => {
   );
 };
 
-// Hook to detect clicks outside of a component.
-// Add it in a separate file, I've added here for simplicity
+// Hook to detect clicks outside of a component
 export const useOutsideClick = (
   ref: React.RefObject<HTMLDivElement>,
   callback: Function
 ) => {
   useEffect(() => {
     const listener = (event: any) => {
-      // DO NOTHING if the element being clicked is the target element or their children
       if (!ref.current || ref.current.contains(event.target)) {
         return;
       }
       callback(event);
     };
 
-    document.addEventListener("mousedown", listener);
-    document.addEventListener("touchstart", listener);
+    document.addEventListener('mousedown', listener);
+    document.addEventListener('touchstart', listener);
 
     return () => {
-      document.removeEventListener("mousedown", listener);
-      document.removeEventListener("touchstart", listener);
+      document.removeEventListener('mousedown', listener);
+      document.removeEventListener('touchstart', listener);
     };
   }, [ref, callback]);
 };
-
-
