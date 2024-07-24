@@ -56,10 +56,7 @@ export default function Home() {
 
   return (
     <main className="section main bg-[#020617]">
-      <Head>
-        <link rel="icon" href="./assets/FavIcon1.png" type="image/x-icon"/>
-        <meta name="description" content="Shaun's Portfolio" />
-      </Head>
+      
       {showPopup ? (
         <Popup />
       ) : (
