@@ -21,8 +21,16 @@ export function InfiniteMovingCardsDemo() {
       name: "React",
     },
     {
+      src: NextJs.src,
+      name: "Next.js",
+    },
+    {
       src: express.src,
       name: "Express.js",
+    },
+    {
+      src: rails.src,
+      name: "Rails",
     },
     {
       src: node.src,
@@ -37,10 +45,6 @@ export function InfiniteMovingCardsDemo() {
       name: "PostgresSQL",
     },
     {
-      src: NextJs.src,
-      name: "Next.js",
-    },
-    {
       src: typeScript.src,
       name: "TypeScript",
     },
@@ -51,10 +55,6 @@ export function InfiniteMovingCardsDemo() {
     {
       src: python.src,
       name: "Python",
-    },
-    {
-      src: rails.src,
-      name: "Rails",
     },
     {
       src: ruby.src,
