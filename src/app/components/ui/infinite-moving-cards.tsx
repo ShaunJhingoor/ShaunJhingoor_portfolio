@@ -92,7 +92,7 @@ export const InfiniteMovingCards = ({
             <img
               src={item.src}
               alt={item.name}
-              className="w-full h-auto object-cover"
+              className="w-[6rem] h-[6rem] object-contain"
             />
             <div className="mt-2 text-center">
               <span className="text-sm md:text-md leading-[1.6] text-gray-200 font-medium">

@@ -13,6 +13,7 @@ import allAdventure from "./assets/allAdventure.png"
 import teamMates from "./assets/teamMates.png"
 import"./page.css"
 import { InfiniteMovingCardsDemo } from "./components/ui/InfiniteMovingCards";
+import { ExpandableCardDemo } from "./components/ui/expandable-cards";
 import Carousel from "./components/ui/hobbies-carousel";
 
 
@@ -240,6 +241,9 @@ export default function Home() {
             </CardContainer>
           </div>
         </section>
+        {/* <section>
+          <ExpandableCardDemo/>
+        </section> */}
         <section id="skills" className="section skills bg-[#020617] h-[20rem]">
         <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
            Skills

@@ -6,12 +6,12 @@ import node from "../../assets/node.png"
 import mongo from "../../assets/mongo.png"
 import postgres from "../../assets/Postgres.png"
 import typeScript from "../../assets/typescript.png"
-import javascript from "../../assets/javasscript.png"
+import javascript from "../../assets/javascript.png"
 import python from "../../assets/python.png"
 import ruby from "../../assets/ruby.png"
-import AWS from "../../assets/aws.png"
+import AWS from "../../assets/aws1.png"
 import rails from "../../assets/rails.png"
-import NextJs from "../../assets/next.ico"
+import NextJs from "../../assets/next.png"
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -71,7 +71,7 @@ export function InfiniteMovingCardsDemo() {
       <InfiniteMovingCards
         items={items}
         direction="right"
-        speed="slow"
+        speed="normal"
         
       />
     </div>
