@@ -3,8 +3,8 @@ import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/use-outside-click";
-import reading from "../../assets/reading.png";
 import portfolio from "../../assets/portfolio.png"
+import coming from "../../assets/coming.webp"
 
 
 export const CloseIcon = () => {
@@ -51,94 +51,99 @@ const cards = [
       return (
         <p>
           You are currently viewing my Headstarter fellowship project for week 1. I built this portfolio using Next.js, TypeScript, Tailwind CSS, and Vercel for hosting. I have never used this stack before, but wanted to challenge myself. <br /> <br /> I hope you enjoyed my portfolio. If you click the view button you will taken to my github repo for this project.
+          <br />
+          <br />
         </p>
       );
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: reading.src,
+    description: "Week 2",
+    title: "Pantry Tracker 08/04",
+    src: coming.src,
     ctaText: "View",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/ShaunJhingoor",
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          For week 2 of the Headstarter fellowship I will be building a pantry tracker. The pantry tracker will be built using Next.js, React.js, and Firebase. I am excited to improve my skills with React and Next, but mostly excited to learn Firebase.
+          <br /> <br />
+          As of right now if you click the view button you will be directed to my github so you can view my other projects. When the pantry tracker is done I will make sure to update this link.
+          <br />
+          <br />
         </p>
       );
     },
   },
 
   {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: reading.src,
+    description: "Week 3",
+    title: "AI Customer Support 08/11",
+    src: coming.src,
     ctaText: "View",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/ShaunJhingoor",
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
+          Week 3 is the first week of group work. We will be building out an AI customer support utilizing OpenAi, Next.js, and AWS. I am excited to learn more AWS and work with a team of talented devs.
+           <br /> <br />
+          As of right now if you click the view button you will be directed to my github so you can view my other projects. When the AI Customer Support is done I will make sure to update this link.
+          <br />
+          <br />
         </p>
       );
     },
   },
   {
-    description: "Led Zeppelin",
-    title: "Stairway To Heaven",
-    src: reading.src,
+    description: "Week 4",
+    title: "AI Flashcards 08/18",
+    src: coming.src,
     ctaText: "View",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/ShaunJhingoor",
     content: () => {
       return (
         <p>
-          Led Zeppelin, a legendary British rock band, is renowned for their
-          innovative sound and profound impact on the music industry. Formed in
-          London in 1968, they have become a cultural icon in the rock music
-          world. <br /> <br /> Their songs often reflect a blend of blues, hard
-          rock, and folk music, capturing the essence of the 1970s rock era.
-          With a career spanning over a decade, Led Zeppelin has released
-          numerous hit albums and singles that have garnered them a massive fan
-          following both in the United Kingdom and abroad.
+          Week 4 of the Headstarter fellowship we will be making AI Flashcards. We will be utilizing OpenAI, implementing auth, and StripeAPI. I am excited to learn and implement StripeApi for payment processing.
+          <br /> <br />
+          As of right now if you click the view button you will be directed to my github so you can view my other projects. When the AI Flashcards is done I will make sure to update this link.
+          <br />
+          <br />
         </p>
       );
     },
   },
   {
-    description: "Mustafa Zahid",
-    title: "Toh Phir Aao",
-    src: reading.src,
+    description: "Week 5",
+    title: "AI Rate My Professor 08/25",
+    src: coming.src,
     ctaText: "View",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/ShaunJhingoor",
     content: () => {
       return (
         <p>
-          &quot;Aawarapan&quot;, a Bollywood movie starring Emraan Hashmi, is
-          renowned for its intense storyline and powerful performances. Directed
-          by Mohit Suri, the film has become a significant work in the Indian
-          film industry. <br /> <br /> The movie explores themes of love,
-          redemption, and sacrifice, capturing the essence of human emotions and
-          relationships. With a gripping narrative and memorable music,
-          &quot;Aawarapan&quot; has garnered a massive fan following both in
-          India and abroad, solidifying Emraan Hashmi&apos;s status as a
-          versatile actor.
+          Week 5 we will be making an AI Rate My Professor. We will be utilizing RAG, OpenAI, and Vectors in order to make this website. I am excited to complete a RAG application.
+          <br /> <br />
+          As of right now if you click the view button you will be directed to my github so you can view my other projects. When the AI Rate My Professor is done I will make sure to update this link.
+          <br />
+          <br />
+        </p>
+      );
+    },
+  },
+  {
+    description: "Week 6 - 7",
+    title: "Ship to 1000 users 09/08",
+    src: coming.src,
+    ctaText: "View",
+    ctaLink: "https://github.com/ShaunJhingoor",
+    content: () => {
+      return (
+        <p>
+          Week 6-7 our goal will be to make an application that has 1000 users, 1000 people on a waitlist, or 1000 dollars in revenue. In week 7 we will be presenting this project to other engineers.
+          <br /> <br />
+          As of right now if you click the view button you will be directed to my github so you can view my other projects. When the final project is done I will make sure to update this link.
+          <br />
+          <br />
         </p>
       );
     },

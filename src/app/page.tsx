@@ -241,10 +241,13 @@ export default function Home() {
             </CardContainer>
           </div>
         </section>
-        {/* <section>
+        <section id="headstarter" className="section headstarter bg-[#020617] mb-[10rem] ">
+        <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg ">
+           Headstarter.ai Fellowship
+          </h2>
           <ExpandableCardDemo/>
-        </section> */}
-        <section id="skills" className="section skills bg-[#020617] h-[20rem]">
+        </section>
+        <section id="skills" className="section skills bg-[#020617] h-[20rem] " >
         <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
            Skills
           </h2>
