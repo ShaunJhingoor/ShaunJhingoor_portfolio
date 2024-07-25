@@ -276,9 +276,9 @@ export function ExpandableCardDemo() {
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-[#003366] dark:hover:bg-[#003366] rounded-xl cursor-pointer"
+            className="p-4 flex flex-col items-center  md:flex-row md:justify-between md:items-start hover:bg-[#003366] dark:hover:bg-[#003366] rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col md:flex-row">
+            <div className="flex gap-4 flex-col md:flex-row items-center">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
                   width={100}
