@@ -4,6 +4,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import reading from "../../assets/reading.png";
+import portfolio from "../../assets/portfolio.png"
 
 
 export const CloseIcon = () => {
@@ -43,9 +44,9 @@ const cards = [
   {
     description: "Week 1",
     title: "Portfolio",
-    src: reading.src,
+    src: portfolio.src,
     ctaText: "View",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/ShaunJhingoor/ShaunJhingoor_portfolio",
     content: () => {
       return (
         <p>
@@ -188,7 +189,7 @@ export function ExpandableCardDemo() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="relative w-full max-w-[350px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-[#2B394F] sm:rounded-3xl overflow-hidden"
+              className="relative w-[fit] max-w-[40rem] h-[fit] flex flex-col bg-[#2B394F] sm:rounded-3xl overflow-hidden justify-center items-center"
             >
               <motion.button
                 key={`button-${active.title}-${id}`}
@@ -217,7 +218,8 @@ export function ExpandableCardDemo() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-60 lg:h-60 sm:rounded-tr-lg sm:rounded-tl-lg object-contain object-top"
+                  className="w-full h-60 lg:h-60 sm:rounded-tr-lg sm:rounded-tl-lg object-contain"
+                  layout="responsive"
                 />
               </motion.div>
               <div>
