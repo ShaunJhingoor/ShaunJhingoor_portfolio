@@ -241,9 +241,9 @@ export default function Home() {
             </CardContainer>
           </div>
         </section>
-        {/* <section>
+        <section>
           <ExpandableCardDemo/>
-        </section> */}
+        </section>
         <section id="skills" className="section skills bg-[#020617] h-[20rem]">
         <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
            Skills
