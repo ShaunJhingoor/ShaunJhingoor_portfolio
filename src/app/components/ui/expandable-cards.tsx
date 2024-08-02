@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import portfolio from "../../assets/portfolio.png"
 import coming from "../../assets/coming.webp"
+import pantryTracker from "../../assets/pantryTracker.png"
 
 
 export const CloseIcon = () => {
@@ -51,26 +52,22 @@ const cards = [
       return (
         <p>
           You are currently viewing my Headstarter fellowship project for week 1. I built this portfolio using Next.js, TypeScript, Tailwind CSS, and Vercel for hosting. I have never used this stack before, but wanted to challenge myself. <br /> <br /> I hope you enjoyed my portfolio. If you click the view button you will taken to my github repo for this project.
-          <br />
-          <br />
         </p>
       );
     },
   },
   {
     description: "Week 2",
-    title: "Pantry Tracker 08/04",
-    src: coming.src,
+    title: "Pantry Tracker",
+    src: pantryTracker.src,
     ctaText: "View",
-    ctaLink: "https://github.com/ShaunJhingoor",
+    ctaLink: "https://pantry-tracker-ten.vercel.app/",
     content: () => {
       return (
         <p>
-          For week 2 of the Headstarter fellowship I will be building a pantry tracker. The pantry tracker will be built using Next.js, React.js, and Firebase. I am excited to improve my skills with React and Next, but mostly excited to learn Firebase.
+          The Headstarter fellowship project for week 2 involved building a pantry tracker. This application was created using React-Vite, Redux Toolkit, OpenAI API, and Firebase/Firestore. Pantry Tracker features CRUD operations for pantry items and includes image recognition via OpenAI. It also offers full user authentication and Google sign-in/sign-up. 
           <br /> <br />
-          As of right now if you click the view button you will be directed to my github so you can view my other projects. When the pantry tracker is done I will make sure to update this link.
-          <br />
-          <br />
+          If you click the view button you will be directed to the live site of Pantry Tracker.
         </p>
       );
     },
@@ -88,8 +85,6 @@ const cards = [
           Week 3 is the first week of group work. We will be building out an AI customer support utilizing OpenAi, Next.js, and AWS. I am excited to learn more AWS and work with a team of talented devs.
            <br /> <br />
           As of right now if you click the view button you will be directed to my github so you can view my other projects. When the AI Customer Support is done I will make sure to update this link.
-          <br />
-          <br />
         </p>
       );
     },
@@ -106,8 +101,6 @@ const cards = [
           Week 4 of the Headstarter fellowship we will be making AI Flashcards. We will be utilizing OpenAI, implementing auth, and StripeAPI. I am excited to learn and implement StripeApi for payment processing.
           <br /> <br />
           As of right now if you click the view button you will be directed to my github so you can view my other projects. When the AI Flashcards is done I will make sure to update this link.
-          <br />
-          <br />
         </p>
       );
     },
@@ -124,8 +117,6 @@ const cards = [
           Week 5 we will be making an AI Rate My Professor. We will be utilizing RAG, OpenAI, and Vectors in order to make this website. I am excited to complete a RAG application.
           <br /> <br />
           As of right now if you click the view button you will be directed to my github so you can view my other projects. When the AI Rate My Professor is done I will make sure to update this link.
-          <br />
-          <br />
         </p>
       );
     },
@@ -142,8 +133,6 @@ const cards = [
           Week 6-7 our goal will be to make an application that has 1000 users, 1000 people on a waitlist, or 1000 dollars in revenue. In week 7 we will be presenting this project to other engineers.
           <br /> <br />
           As of right now if you click the view button you will be directed to my github so you can view my other projects. When the final project is done I will make sure to update this link.
-          <br />
-          <br />
         </p>
       );
     },
@@ -258,7 +247,7 @@ export function ExpandableCardDemo() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-white text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-white text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
