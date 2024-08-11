@@ -6,6 +6,7 @@ import { useOutsideClick } from "../hooks/use-outside-click";
 import portfolio from "../../assets/portfolio.png"
 import coming from "../../assets/coming.webp"
 import pantryTracker from "../../assets/pantryTracker.png"
+import reactHelper from "../../assets/reactHelper.png"
 
 
 export const CloseIcon = () => {
@@ -75,16 +76,16 @@ const cards = [
 
   {
     description: "Week 3",
-    title: "AI Customer Support 08/11",
-    src: coming.src,
+    title: "React Helper",
+    src: reactHelper.src,
     ctaText: "View",
-    ctaLink: "https://github.com/ShaunJhingoor",
+    ctaLink: "https://chat-bot-one-delta.vercel.app/",
     content: () => {
       return (
         <p>
-          Week 3 is the first week of group work. We will be building out an AI customer support utilizing OpenAi, Next.js, and AWS. I am excited to learn more AWS and work with a team of talented devs.
-           <br /> <br />
-          As of right now if you click the view button you will be directed to my github so you can view my other projects. When the AI Customer Support is done I will make sure to update this link.
+          In Week 3 of the Headstarter fellowship, our team of four built a Chatbot using Next.js, Material UI, Tailwind CSS, Pinecone, and the OpenAI API. The result, React Helper, is a RAG (Retrieval-Augmented Generation) Chatbot trained using data from web-scraped React documentation. It also includes user authentication.
+          <br /> <br />
+          If you click the view button you will be directed to the live site of React Helper.
         </p>
       );
     },
