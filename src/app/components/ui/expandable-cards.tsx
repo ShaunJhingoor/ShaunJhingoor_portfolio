@@ -7,6 +7,7 @@ import portfolio from "../../assets/portfolio.png"
 import coming from "../../assets/coming.webp"
 import pantryTracker from "../../assets/pantryTracker.png"
 import reactHelper from "../../assets/reactHelper.png"
+import AIflashworld from "../../assets/AI-Flashworld.png"
 
 
 export const CloseIcon = () => {
@@ -92,16 +93,16 @@ const cards = [
   },
   {
     description: "Week 4",
-    title: "AI Flashcards 08/18",
-    src: coming.src,
+    title: "AI FlashWorld",
+    src: AIflashworld.src,
     ctaText: "View",
-    ctaLink: "https://github.com/ShaunJhingoor",
+    ctaLink: "https://ai-flash-word.vercel.app/",
     content: () => {
       return (
         <p>
-          Week 4 of the Headstarter fellowship we will be making AI Flashcards. We will be utilizing OpenAI, implementing auth, and StripeAPI. I am excited to learn and implement StripeApi for payment processing.
+          In Week 4 of the Headstarter fellowship we were tasked with making an AI flash card website. AI FlashWord was built in a team of four utilizing Stripe API, Open AI, Firebase Firestore, and NextJS. Users can generate AI-generated flashcards for topics of their choice or an uploaded PDF. Premium users can generate and study larger decks, and have access to an unlimited number of decks.
           <br /> <br />
-          As of right now if you click the view button you will be directed to my github so you can view my other projects. When the AI Flashcards is done I will make sure to update this link.
+          If you click the view button you will be directed to the live site of AI FlashWorld.
         </p>
       );
     },
