@@ -100,7 +100,7 @@ const cards = [
     content: () => {
       return (
         <p>
-          In Week 4 of the Headstarter fellowship we were tasked with making an AI flash card website. AI FlashWord was built in a team of four utilizing Stripe API, Open AI, Firebase Firestore, and NextJS. Users can generate AI-generated flashcards for topics of their choice or an uploaded PDF. Premium users can generate and study larger decks, and have access to an unlimited number of decks.
+          In Week 4 of the Headstarter fellowship we were tasked with making an AI flash card website. AI FlashWord was built in a team of four utilizing Stripe API, Open AI, Firebase Firestore, and NextJS. Users can generate AI-generated flashcards for topics of their choice or an uploaded PDF. Premium users can generate and study larger decks, generate quizzes, and have access to an unlimited number of decks.
           <br /> <br />
           If you click the view button you will be directed to the live site of AI FlashWorld.
         </p>
