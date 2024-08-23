@@ -8,6 +8,7 @@ import coming from "../../assets/coming.webp"
 import pantryTracker from "../../assets/pantryTracker.png"
 import reactHelper from "../../assets/reactHelper.png"
 import AIflashworld from "../../assets/AI-Flashworld.png"
+import AIRateMyProfessor from "../../assets/AI-Rate-My-Professor.png"
 
 
 export const CloseIcon = () => {
@@ -109,16 +110,16 @@ const cards = [
   },
   {
     description: "Week 5",
-    title: "AI Rate My Professor 08/25",
-    src: coming.src,
+    title: "AI Rate My Professor",
+    src: AIRateMyProfessor.src,
     ctaText: "View",
-    ctaLink: "https://github.com/ShaunJhingoor",
+    ctaLink: "https://ai-rate-my-professor-delta.vercel.app/",
     content: () => {
       return (
         <p>
-          Week 5 we will be making an AI Rate My Professor. We will be utilizing RAG, OpenAI, and Vectors in order to make this website. I am excited to complete a RAG application.
+          In Week 5 of the Headstarter Fellowship, our team of four developed AI Rate My Professor, a pioneering AI-driven platform designed to enhance the way students evaluate professors. By harnessing the power of OpenAI, Pinecone, Material UI, Jupyter Notebook, and Next.js, we built a site that allows users to access and retrieve precise information from Rate My Professor. This Retrieval-Augmented Generation (RAG) application streamlines the search process, offering tailored insights to assist in crafting the perfect class schedule
           <br /> <br />
-          As of right now if you click the view button you will be directed to my github so you can view my other projects. When the AI Rate My Professor is done I will make sure to update this link.
+          If you click the view button you will be directed to the live site of AI Rate My Professor.
         </p>
       );
     },
@@ -182,83 +183,70 @@ export function ExpandableCardDemo() {
       <AnimatePresence>
         {active && typeof active === "object" ? (
           <div className="fixed inset-0 grid place-items-center z-[100]">
-            <motion.div
-              layoutId={`card-${active.title}-${id}`}
-              ref={ref}
-              className="relative w-[fit] max-w-[40rem] h-[fit] flex flex-col bg-[#2B394F] sm:rounded-3xl overflow-hidden justify-center items-center"
+          <motion.div
+            layoutId={`card-${active.title}-${id}`}
+            ref={ref}
+            className="relative w-full max-w-4xl h-auto bg-[#2B394F] rounded-3xl overflow-hidden"
+          >
+            {/* Close Button */}
+            <motion.button
+              key={`button-${active.title}-${id}`}
+              layout
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.05 } }}
+              className="absolute top-2 right-2 flex items-center justify-center bg-[#2B394F] rounded-full h-8 w-8 border border-[#2B394F] z-20"
+              onClick={() => setActive(null)}
             >
-              <motion.button
-                key={`button-${active.title}-${id}`}
-                layout
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: 1,
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: {
-                    duration: 0.05,
-                  },
-                }}
-                className="absolute top-2 right-2 flex items-center justify-center bg-[#2B394F] rounded-full h-8 w-8 border border-[#2B394F]"
-                onClick={() => setActive(null)}
-              >
-              <CloseIcon/>
-              </motion.button>
-              <motion.div layoutId={`image-${active.title}-${id}`}>
-                <Image
-                  priority
-                  width={200}
-                  height={200}
-                  src={active.src}
-                  alt={active.title}
-                  className="w-full h-60 lg:h-60 sm:rounded-tr-lg sm:rounded-tl-lg object-contain"
-                  layout="responsive"
-                />
-              </motion.div>
-              <div>
-                <div className="flex justify-between items-start p-4">
-                  <div>
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-white"
-                    >
-                      {active.title}
-                    </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="text-white"
-                    >
-                      {active.description}
-                    </motion.p>
-                  </div>
-                  <motion.a
-                    layoutId={`button-${active.title}-${id}`}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-black text-white"
-                  >
-                    View
-                  </motion.a>
-                </div>
-                <div className="pt-2 relative px-4">
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="text-white text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
-                  >
-                    {typeof active.content === "function"
-                      ? active.content()
-                      : active.content}
-                  </motion.div>
-                </div>
-              </div>
+              <CloseIcon />
+            </motion.button>
+        
+            <motion.div
+              layoutId={`image-${active.title}-${id}`}
+              className="relative w-full h-80 bg-no-repeat bg-center"
+              style={{
+                backgroundImage: `url(${active.src})`,
+                backgroundSize: 'contain', // Ensures the whole image is visible
+              }}
+            >
+        
             </motion.div>
-          </div>
+
+            {/* Text Content Section */}
+            <div className="p-4">
+              <div className="flex flex-col md:flex-row justify-between items-start">
+                <div>
+                  <motion.h3 layoutId={`title-${active.title}-${id}`} className="font-bold text-white">
+                    {active.title}
+                  </motion.h3>
+                  <motion.p layoutId={`description-${active.description}-${id}`} className="text-white">
+                    {active.description}
+                  </motion.p>
+                </div>
+                <motion.a
+                  layoutId={`button-${active.title}-${id}`}
+                  href={active.ctaLink}
+                  target="_blank"
+                  className="px-4 py-3 text-sm rounded-full font-bold bg-black text-white mt-4 md:mt-0"
+                >
+                  View
+                </motion.a>
+              </div>
+
+              <div className="pt-2">
+                <motion.div
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="text-white text-xs md:text-sm lg:text-base max-h-40 md:max-h-fit pb-10 flex flex-col items-start gap-4 overflow-auto"
+                >
+                  {typeof active.content === "function" ? active.content() : active.content}
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </div>        
         ) : null}
       </AnimatePresence>
       <ul className="max-w-2xl mx-auto w-full gap-4 bg-gray-900">
