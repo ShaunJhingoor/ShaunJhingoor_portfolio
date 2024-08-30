@@ -49,7 +49,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(false);
-    }, 5000); 
+    }, 3000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -63,7 +63,7 @@ export default function Home() {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 5100); 
+      }, 3100); 
     }
   }, []);
   
