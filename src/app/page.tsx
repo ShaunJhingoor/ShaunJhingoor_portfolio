@@ -54,6 +54,20 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        console.log(element);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 5100); 
+    }
+  }, []);
+  
+
   return (
     <main className="section main bg-[#020617]">
       
