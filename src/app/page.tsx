@@ -79,6 +79,19 @@ export default function Home() {
           <section id="about">
           <LampDemo />
           </section>
+          <section id="skills" className="section skills bg-[#020617] h-[20rem] " >
+            <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
+              Skills
+              </h2>
+              <InfiniteMovingCardsDemo/>
+            </section>
+          <section id="headstarter" className="section headstarter bg-[#020617] mb-[10rem] mt-[5rem]">
+          <h2 className="section__title text-4xl mb-[5vh] md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
+            Headstarter.ai Fellowship
+            </h2>
+            <ExpandableCardDemo/>
+        </section>
+
           <section id="projects" className="section projects bg-[#020617]">
           <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
             Projects
@@ -255,20 +268,8 @@ export default function Home() {
             </CardContainer>
           </div>
         </section>
-        <section id="headstarter" className="section headstarter bg-[#020617] mb-[10rem] ">
-        <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg ">
-           Headstarter.ai Fellowship
-          </h2>
-          <ExpandableCardDemo/>
-        </section>
-        <section id="skills" className="section skills bg-[#020617] h-[20rem] " >
-        <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
-           Skills
-          </h2>
-          <InfiniteMovingCardsDemo/>
-        </section>
         <section>
-          <Carousel/>
+              <Carousel/>
         </section>
         <section id="contact" className="section contact bg-[#020617] h-[12rem] mt-[4rem]" >
         <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">

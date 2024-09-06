@@ -36,8 +36,8 @@ const NavBar = () => {
       className="relative bg-[#003366] text-white shadow-input flex justify-evenly space-x-4 px-8 py-6"
     >
       <MenuItem setActive={setActive} active={active} item="About" href="#about" />
-      <MenuItem setActive={setActive} active={active} item="Projects" href="#projects" />
       <MenuItem setActive={setActive} active={active} item="Skills" href="#skills" />
+      <MenuItem setActive={setActive} active={active} item="Projects" href="#projects" />
       <MenuItem setActive={setActive} active={active} item="Hobbies" href="#hobbies" />
       <MenuItem setActive={setActive} active={active} item="Contact" href="#contact" />
     </nav>
