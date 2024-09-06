@@ -9,6 +9,7 @@ import pantryTracker from "../../assets/pantryTracker.png"
 import reactHelper from "../../assets/reactHelper.png"
 import AIflashworld from "../../assets/AI-Flashworld.png"
 import AIRateMyProfessor from "../../assets/AI-Rate-My-Professor.png"
+import dawdle from "../../assets/dawdle.png"
 
 
 export const CloseIcon = () => {
@@ -126,16 +127,16 @@ const cards = [
   },
   {
     description: "Week 6 - 7",
-    title: "Ship to 1000 users 09/08",
-    src: coming.src,
+    title: "Dawdle",
+    src: dawdle.src,
     ctaText: "View",
-    ctaLink: "https://github.com/ShaunJhingoor",
+    ctaLink: "https://dawdle.lol/",
     content: () => {
       return (
         <p>
-          Week 6-7 our goal will be to make an application that has 1000 users, 1000 people on a waitlist, or 1000 dollars in revenue. In week 7 we will be presenting this project to other engineers.
-          <br /> <br />
-          As of right now if you click the view button you will be directed to my github so you can view my other projects. When the final project is done I will make sure to update this link.
+         Frustrated with endless planning back-and-forth? Try Dawdle! Our user-friendly platform makes it simple to create and manage groups, letting you effortlessly coordinate with friends. Organize events within each group and let AI-generated itineraries streamline your planning. With Dawdle, making plans has never been easier!
+         <br /> <br />
+         Click the view button to hop on the waitlist today!
         </p>
       );
     },
