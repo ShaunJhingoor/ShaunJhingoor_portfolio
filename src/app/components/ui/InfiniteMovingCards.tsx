@@ -29,6 +29,7 @@ import Git from "../../assets/Git.png"
 import JSON from "../../assets/JSON.png"
 import Mongoose from "../../assets/Mongoose.png"
 import DynamoDB from "../../assets/dbd1.png"
+import Firebase from "../../assets/fb1.png"
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -81,10 +82,10 @@ export function InfiniteMovingCardsDemo() {
       src: Firestore.src,
       name: "Firestore",
     },
-    // {
-    //   src: Firebase.src,
-    //   name: "Firebase",
-    // },
+    {
+      src: Firebase.src,
+      name: "Firebase",
+    },
     {
       src: postgres.src,
       name: "PostgresSQL",
