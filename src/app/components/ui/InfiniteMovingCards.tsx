@@ -28,7 +28,7 @@ import Babel from "../../assets/Babel.png"
 import Git from "../../assets/Git.png"
 import JSON from "../../assets/JSON.png"
 import Mongoose from "../../assets/Mongoose.png"
-import DynamoDB from "../../assets/DynamoDB.png"
+import DynamoDB from "../../assets/dbd1.png"
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
