@@ -28,8 +28,6 @@ import Babel from "../../assets/Babel.png"
 import Git from "../../assets/Git.png"
 import JSON from "../../assets/JSON.png"
 import Mongoose from "../../assets/Mongoose.png"
-import Firebase from "../../assets/firebase.png"
-import DynamoDB from "../../assets/dynamoDB.png"
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -70,10 +68,10 @@ export function InfiniteMovingCardsDemo() {
       src: Mongoose.src,
       name: "Mongoose.js",
     },
-    {
-      src: DynamoDB.src,
-      name: "DynamoDB",
-    },
+    // {
+    //   src: DynamoDB.src,
+    //   name: "DynamoDB",
+    // },
     {
       src: Lambda.src,
       name: "Lambda",
@@ -82,10 +80,10 @@ export function InfiniteMovingCardsDemo() {
       src: Firestore.src,
       name: "Firestore",
     },
-    {
-      src: Firebase.src,
-      name: "Firebase",
-    },
+    // {
+    //   src: Firebase.src,
+    //   name: "Firebase",
+    // },
     {
       src: postgres.src,
       name: "PostgresSQL",
