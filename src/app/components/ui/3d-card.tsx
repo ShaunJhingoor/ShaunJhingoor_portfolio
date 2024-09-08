@@ -7,7 +7,7 @@ import React, {
   useContext,
   useRef,
   useEffect,
-} from "react";
+} from "react"
 
 const MouseEnterContext = createContext<
   [boolean, React.Dispatch<React.SetStateAction<boolean>>] | undefined
