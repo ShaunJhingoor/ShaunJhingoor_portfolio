@@ -28,8 +28,8 @@ import Babel from "../../assets/Babel.png"
 import Git from "../../assets/Git.png"
 import JSON from "../../assets/JSON.png"
 import Mongoose from "../../assets/Mongoose.png"
-import Firebase from "../../assets/Firebase.png"
-import DynamoDB from "../../assets/DynamoDB.png"
+import Firebase from "../../assets/firebase.png"
+import DynamoDB from "../../assets/dynamoDB.png"
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
