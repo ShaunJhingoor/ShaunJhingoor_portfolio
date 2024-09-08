@@ -86,13 +86,13 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="flex flex-col items-center w-[50px] md:w-[100px] flex-shrink-0"
+            className="flex flex-col items-center w-[50px] md:w-[100px] flex-shrink-0 bg-transparent"
             key={item.name}
           >
             <img
               src={item.src}
               alt={item.name}
-              className="w-[6rem] h-[6rem] object-contain"
+              className="w-[6rem] h-[6rem] object-contain bg-transparent"
             />
             <div className="mt-2 text-center">
               <span className="text-sm md:text-md leading-[1.6] text-gray-200 font-medium">
