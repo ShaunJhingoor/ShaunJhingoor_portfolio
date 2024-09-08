@@ -16,9 +16,7 @@ import NextJs from "../../assets/next.png"
 import OpenAI from "../../assets/OpenAI.png"
 import Stripe from "../../assets/Stripe.jpeg"
 import Tailwind from "../../assets/Tailwind.png"
-import Firebase from "../../assets/Firebase.png"
 import Firestore from "../../assets/Firestore.png"
-import DynamoDB from "../../assets/DynamoDB.png"
 import Langchain from "../../assets/langchain.png"
 import MaterialUI from "../../assets/MateralUI.png"
 import Redux from "../../assets/Redux.png"
@@ -30,6 +28,8 @@ import Babel from "../../assets/Babel.png"
 import Git from "../../assets/Git.png"
 import JSON from "../../assets/JSON.png"
 import Mongoose from "../../assets/Mongoose.png"
+import Firebase from "../../assets/Firebase.png"
+import DynamoDB from "../../assets/DynamoDB.png"
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
