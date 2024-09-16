@@ -4,12 +4,12 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import portfolio from "../../assets/portfolio.png"
-import coming from "../../assets/coming.webp"
 import pantryTracker from "../../assets/pantryTracker.png"
 import reactHelper from "../../assets/reactHelper.png"
 import AIflashworld from "../../assets/AI-Flashworld.png"
 import AIRateMyProfessor from "../../assets/AI-Rate-My-Professor.png"
 import dawdle from "../../assets/dawdle.png"
+import ToDos from "../../assets/ToDos.png"
 
 
 export const CloseIcon = () => {
@@ -136,7 +136,23 @@ const cards = [
         <p>
          Frustrated with endless planning back-and-forth? Try Dawdle! Our user-friendly platform makes it simple to create and manage groups, letting you effortlessly coordinate with friends. Organize events within each group and let AI-generated itineraries streamline your planning. With Dawdle, making plans has never been easier!
          <br /> <br />
-         Click the view button to hop on the waitlist today!
+         If you click the view button you will be directed to the live site of Dawdle.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Bonus",
+    title: "To Dos",
+    src: ToDos.src,
+    ctaText: "View",
+    ctaLink: "https://todos-zeta-smoky.vercel.app/",
+    content: () => {
+      return (
+        <p>
+         To Dos is a task management platform built with Convex for the backend, Next.js for the frontend, and TypeScript. It integrates Clerk for authentication and OpenAI to enhance user experience. The purpose of To Dos is to provide a seamless way for users to manage their daily tasks efficiently.
+         <br /> <br />
+         If you click the view button you will be directed to the live site of To Dos.
         </p>
       );
     },
