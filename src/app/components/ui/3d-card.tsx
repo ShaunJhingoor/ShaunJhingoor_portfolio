@@ -1,13 +1,12 @@
 "use client";
 import { cn } from "../../lib/utils";
-import Image from "next/image";
 import React, {
   createContext,
   useState,
   useContext,
   useRef,
   useEffect,
-} from "react"
+} from "react";
 
 const MouseEnterContext = createContext<
   [boolean, React.Dispatch<React.SetStateAction<boolean>>] | undefined
@@ -48,12 +47,9 @@ export const CardContainer = ({
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
-        className={cn(
-          "flex items-center justify-center",
-          containerClassName
-        )}
+        className={cn("flex items-center justify-center", containerClassName)}
         style={{
-          perspective: "1500px", // Increased perspective to enhance 3D effect
+          perspective: "2000px",
         }}
       >
         <div
@@ -101,7 +97,7 @@ export const CardItem = ({
   className,
   translateX = 0,
   translateY = 0,
-  translateZ = 150, 
+  translateZ = 150,
   rotateX = 0,
   rotateY = 0,
   rotateZ = 0,
@@ -137,7 +133,10 @@ export const CardItem = ({
   return (
     <Tag
       ref={ref}
-      className={cn("w-fit transition-transform duration-300 ease-out", className)}
+      className={cn(
+        "w-fit transition-transform duration-300 ease-out",
+        className
+      )}
       {...rest}
     >
       {children}
