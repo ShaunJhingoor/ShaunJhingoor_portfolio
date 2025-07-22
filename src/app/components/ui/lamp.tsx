@@ -9,14 +9,14 @@ import { ModalTrigger, ModalContent, Modal } from "./animated-modal";
 import resume from "../../assets/shaun.pdf";
 
 export function LampDemo() {
-  const [yValue, setYValue] = React.useState("-20dvh");
+  const [yValue, setYValue] = React.useState("-20vh");
 
   React.useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 600) {
-        setYValue("-15dvh");
+        setYValue("5vh");
       } else {
-        setYValue("-20dvh");
+        setYValue("-20vh");
       }
     };
 
