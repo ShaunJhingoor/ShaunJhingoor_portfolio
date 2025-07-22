@@ -31,6 +31,8 @@ import Mongoose from "../../assets/Mongoose.png";
 import DynamoDB from "../../assets/dbd1.png";
 import Firebase from "../../assets/fb1.png";
 import convex from "../../assets/convex.png";
+import pinata from "../../assets/pinata.png";
+import viem from "../../assets/viem.png";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -158,6 +160,14 @@ export function InfiniteMovingCardsDemo() {
     {
       src: Jupyter.src,
       name: "Jupyter",
+    },
+    {
+      src: pinata.src,
+      name: "Pinata",
+    },
+    {
+      src: viem.src,
+      name: "Viem",
     },
   ];
 

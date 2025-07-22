@@ -2,29 +2,28 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../lib/utils";
-import profile from "../../assets/image.png"
+import profile from "../../assets/image.png";
 import { useState } from "react";
 import { useEffect } from "react";
 import { ModalTrigger, ModalContent, Modal } from "./animated-modal";
-import resume from "../../assets/shaun.pdf"
-
+import resume from "../../assets/shaun.pdf";
 
 export function LampDemo() {
-  const [yValue, setYValue] = React.useState('-20vh');
+  const [yValue, setYValue] = React.useState("-20dvh");
 
   React.useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 600) {
-        setYValue('5vh');
+        setYValue("-15dvh");
       } else {
-        setYValue('-20vh');
+        setYValue("-20dvh");
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize(); // Set initial value
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -35,38 +34,56 @@ export function LampDemo() {
         transition={{
           delay: 0.3,
           duration: 1,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         }}
         style={{
-          marginBottom: '-10rem',
-          marginTop: '2rem',
-          background: 'linear-gradient(to bottom right, #ffffff, #f3f4f6)',
-          padding: '1rem',
-          backgroundClip: 'text',
-          textAlign: 'center',
-          fontSize: '2.25rem',
-          fontWeight: '500',
-          letterSpacing: '-0.015em',
-          color: 'transparent',
+          marginBottom: "-10rem",
+          marginTop: "4dvh",
+          background: "linear-gradient(to bottom right, #ffffff, #f3f4f6)",
+          padding: "1rem",
+          backgroundClip: "text",
+          textAlign: "center",
+          fontSize: "2.25rem",
+          fontWeight: "500",
+          letterSpacing: "-0.015em",
+          color: "transparent",
         }}
       >
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <img
             src={profile.src}
             alt="profile"
-            style={{ width: '7.5rem', height: '7.5rem', borderRadius: '50%', alignSelf: 'center', objectFit: 'cover' }}
+            style={{
+              width: "7.5rem",
+              height: "7.5rem",
+              borderRadius: "50%",
+              alignSelf: "center",
+              objectFit: "cover",
+            }}
           />
         </div>
         Hi, I am Shaun Jhingoor.
-        <p style={{
-          fontSize: '1.2rem',
-          marginTop: '1rem',
-          maxWidth: '600px',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          lineHeight: '1.75',
-        }}>
-          Innovative coding professional with Biology/Healthcare background. Demonstrated ability to meet deadlines consistently. Driven by determination; thrives under high-stress situations. Ready to commit to a company dedicated to helping others and provide advanced solutions.
+        <p
+          style={{
+            fontSize: "1.2rem",
+            marginTop: "1rem",
+            maxWidth: "600px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            lineHeight: "1.75",
+          }}
+        >
+          Innovative coding professional with Biology/Healthcare background.
+          Demonstrated ability to meet deadlines consistently. Driven by
+          determination; thrives under high-stress situations. Ready to commit
+          to a company dedicated to helping others and provide advanced
+          solutions.
         </p>
         <div>
           <Modal>
@@ -91,19 +108,19 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        'relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0',
+        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0",
         className
       )}
     >
       {/* Container for animated backgrounds and overlays */}
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 translate-y-[-1rem]">
         <motion.div
-          initial={{ opacity: 0, width: '10rem' }}
-          whileInView={{ opacity: 1, width: '30vw' }}
+          initial={{ opacity: 0, width: "10rem" }}
+          whileInView={{ opacity: 1, width: "30vw" }}
           transition={{
             delay: 0.3,
             duration: 1,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
@@ -114,12 +131,12 @@ export const LampContainer = ({
           <div className="absolute w-40 h-[100%] left-0 bg-slate-950 bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, width: '10rem' }}
-          whileInView={{ opacity: 1, width: '30vw' }}
+          initial={{ opacity: 0, width: "10rem" }}
+          whileInView={{ opacity: 1, width: "30vw" }}
           transition={{
             delay: 0.3,
             duration: 1,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
@@ -133,22 +150,22 @@ export const LampContainer = ({
         <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
         <div className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-cyan-500 opacity-50 blur-3xl"></div>
         <motion.div
-          initial={{ width: '8rem' }}
-          whileInView={{ width: '20vw' }}
+          initial={{ width: "8rem" }}
+          whileInView={{ width: "20vw" }}
           transition={{
             delay: 0.3,
             duration: 1,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl"
         ></motion.div>
         <motion.div
-          initial={{ width: '15rem' }}
-          whileInView={{ width: '30vw' }}
+          initial={{ width: "15rem" }}
+          whileInView={{ width: "30vw" }}
           transition={{
             delay: 0.3,
             duration: 1,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
           className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-cyan-400"
         ></motion.div>
@@ -162,7 +179,3 @@ export const LampContainer = ({
     </div>
   );
 };
-
-  
-  
-  

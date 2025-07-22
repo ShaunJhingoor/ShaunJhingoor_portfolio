@@ -87,7 +87,7 @@ export default function Home() {
             id="headstarter"
             className="section headstarter bg-[#020617] mb-[10rem] mt-[5rem]"
           >
-            <h2 className="section__title text-4xl mb-[5vh] md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
+            <h2 className="section__title text-4xl mb-[5vh] md:text-5xl font-bold  text-center text-white pb-4 drop-shadow-lg">
               Headstarter.ai Fellowship
             </h2>
             <ExpandableCardDemo />
