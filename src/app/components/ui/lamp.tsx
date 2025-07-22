@@ -38,7 +38,7 @@ export function LampDemo() {
         }}
         style={{
           marginBottom: "-10rem",
-          marginTop: "4dvh",
+          marginTop: "2dvh",
           background: "linear-gradient(to bottom right, #ffffff, #f3f4f6)",
           padding: "1rem",
           backgroundClip: "text",
