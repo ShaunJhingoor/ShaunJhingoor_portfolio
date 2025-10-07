@@ -33,6 +33,7 @@ import Firebase from "../../assets/fb1.png";
 import convex from "../../assets/convex.png";
 import pinata from "../../assets/pinata.png";
 import viem from "../../assets/viem.png";
+import fastapi from "../../assets/fastapi.png";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -96,6 +97,10 @@ export function InfiniteMovingCardsDemo() {
     {
       src: postgres.src,
       name: "PostgresSQL",
+    },
+    {
+      src: fastapi.src,
+      name: "FastAPI",
     },
     {
       src: typeScript.src,
