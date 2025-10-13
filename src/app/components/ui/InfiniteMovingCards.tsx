@@ -34,6 +34,7 @@ import convex from "../../assets/convex.png";
 import pinata from "../../assets/pinata.png";
 import viem from "../../assets/viem.png";
 import fastapi from "../../assets/fastapi.png";
+import sqlAlchemy from "../../assets/sqlAlchemy.png";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -97,6 +98,10 @@ export function InfiniteMovingCardsDemo() {
     {
       src: postgres.src,
       name: "PostgresSQL",
+    },
+    {
+      src: sqlAlchemy.src,
+      name: "SQLAlchemy",
     },
     {
       src: fastapi.src,
