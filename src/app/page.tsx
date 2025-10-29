@@ -77,20 +77,6 @@ const Popup = () => {
   );
 };
 
-const skills: { name: string; level?: string }[] = [
-  { name: "TypeScript", level: "Advanced" },
-  { name: "React", level: "Advanced" },
-  { name: "Next.js", level: "Advanced" },
-  { name: "Tailwind CSS", level: "Advanced" },
-  { name: "Redux", level: "Intermediate" },
-  { name: "Framer Motion", level: "Intermediate" },
-  { name: "Node.js", level: "Intermediate" },
-  { name: "PostgreSQL", level: "Intermediate" },
-  { name: "Firebase/Firestore", level: "Intermediate" },
-  { name: "Pinecone (RAG)", level: "Intermediate" },
-  { name: "OpenAI APIs", level: "Advanced" },
-  { name: "AWS (Lambda, API GW)", level: "Intermediate" },
-];
 export default function Home() {
   const [showPopup, setShowPopup] = useState(true);
   const [open, setOpen] = useState(false);
