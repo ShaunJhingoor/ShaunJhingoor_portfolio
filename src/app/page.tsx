@@ -52,6 +52,7 @@ import viem from "./assets/viem.png";
 import fastapi from "./assets/fastapi.png";
 import sqlAlchemy from "./assets/sqlAlchemy.png";
 import reactPic from "./assets/react.png";
+import huggingFace from "./assets/hugging-face.png";
 
 const Popup = () => {
   return (
@@ -150,6 +151,7 @@ export default function Home() {
     LangChain: Langchain.src,
     Pinecone: Pinecone.src,
     Jupyter: Jupyter.src,
+    "Hugging Face": huggingFace.src,
 
     AWS: AWS.src,
     "Google Cloud (GCP)": GCP.src,
@@ -213,6 +215,7 @@ export default function Home() {
         { name: "OpenAI", src: ICON["OpenAI"] },
         { name: "LangChain", src: ICON["LangChain"] },
         { name: "Pinecone", src: ICON["Pinecone"] },
+        { name: "Hugging Face", src: ICON["Hugging Face"] },
         { name: "Jupyter", src: ICON["Jupyter"] },
       ],
     },
