@@ -116,11 +116,9 @@ export default function Home() {
     }
   }, []);
 
-  // types (optional, but nice)
   type Skill = { name: string; src: string; level?: string };
   type SkillCategory = { title: string; skills: Skill[] };
 
-  // centralized icon map (easy to reuse anywhere)
   const ICON: Record<string, string> = {
     React: reactPic.src,
     "Next.js": NextJs.src,
@@ -166,7 +164,6 @@ export default function Home() {
     Viem: viem.src,
   };
 
-  // final categories
   const categories: SkillCategory[] = [
     {
       title: "Frontend",
