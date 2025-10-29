@@ -16,6 +16,42 @@ import { InfiniteMovingCardsDemo } from "./components/ui/InfiniteMovingCards";
 import { ExpandableCardDemo } from "./components/ui/expandable-cards";
 import Carousel from "./components/ui/hobbies-carousel";
 import { ThreeDCardDemo } from "./components/ui/3d-card-single";
+import { SkillsModal } from "./components/ui/skills-modal";
+import express from "./assets/express.png";
+import node from "./assets/node.png";
+import mongo from "./assets/mongo.png";
+import postgres from "./assets/Postgres.png";
+import typeScript from "./assets/typescript.png";
+import javascript from "./assets/javascript.png";
+import python from "./assets/python.png";
+import ruby from "./assets/ruby.png";
+import AWS from "./assets/aws1.png";
+import GCP from "./assets/GCP1.png";
+import rails from "./assets/rails.png";
+import NextJs from "./assets/next.png";
+import OpenAI from "./assets/OpenAI.png";
+import Stripe from "./assets/Stripe.jpeg";
+import Tailwind from "./assets/Tailwind.png";
+import Firestore from "./assets/Firestore.png";
+import Langchain from "./assets/langchain.png";
+import MaterialUI from "./assets/MateralUI.png";
+import Redux from "./assets/Redux.png";
+import Jupyter from "./assets/Jupyter.png";
+import Lambda from "./assets/Lambda.png";
+import Pinecone from "./assets/Pinecone.png";
+import Webpack from "./assets/Webpack.png";
+import Babel from "./assets/Babel.png";
+import Git from "./assets/Git.png";
+import JSON from "./assets/JSON.png";
+import Mongoose from "./assets/Mongoose.png";
+import DynamoDB from "./assets/dbd1.png";
+import Firebase from "./assets/fb1.png";
+import convex from "./assets/convex.png";
+import pinata from "./assets/pinata.png";
+import viem from "./assets/viem.png";
+import fastapi from "./assets/fastapi.png";
+import sqlAlchemy from "./assets/sqlAlchemy.png";
+import reactPic from "./assets/react.png";
 
 const Popup = () => {
   return (
@@ -40,8 +76,23 @@ const Popup = () => {
   );
 };
 
+const skills: { name: string; level?: string }[] = [
+  { name: "TypeScript", level: "Advanced" },
+  { name: "React", level: "Advanced" },
+  { name: "Next.js", level: "Advanced" },
+  { name: "Tailwind CSS", level: "Advanced" },
+  { name: "Redux", level: "Intermediate" },
+  { name: "Framer Motion", level: "Intermediate" },
+  { name: "Node.js", level: "Intermediate" },
+  { name: "PostgreSQL", level: "Intermediate" },
+  { name: "Firebase/Firestore", level: "Intermediate" },
+  { name: "Pinecone (RAG)", level: "Intermediate" },
+  { name: "OpenAI APIs", level: "Advanced" },
+  { name: "AWS (Lambda, API GW)", level: "Intermediate" },
+];
 export default function Home() {
   const [showPopup, setShowPopup] = useState(true);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -64,6 +115,129 @@ export default function Home() {
     }
   }, []);
 
+  // types (optional, but nice)
+  type Skill = { name: string; src: string; level?: string };
+  type SkillCategory = { title: string; skills: Skill[] };
+
+  // centralized icon map (easy to reuse anywhere)
+  const ICON: Record<string, string> = {
+    React: reactPic.src,
+    "Next.js": NextJs.src,
+    "Tailwind CSS": Tailwind.src,
+    "Material UI": MaterialUI.src,
+    Redux: Redux.src,
+
+    TypeScript: typeScript.src,
+    JavaScript: javascript.src,
+    Python: python.src,
+    Ruby: ruby.src,
+
+    "Node.js": node.src,
+    "Express.js": express.src,
+    FastAPI: fastapi.src,
+    Rails: rails.src,
+
+    PostgreSQL: postgres.src,
+    MongoDB: mongo.src,
+    Mongoose: Mongoose.src,
+    DynamoDB: DynamoDB.src,
+    Firebase: Firebase.src,
+    Firestore: Firestore.src,
+    Convex: convex.src,
+    SQLAlchemy: sqlAlchemy.src,
+
+    OpenAI: OpenAI.src,
+    LangChain: Langchain.src,
+    Pinecone: Pinecone.src,
+    Jupyter: Jupyter.src,
+
+    AWS: AWS.src,
+    "Google Cloud (GCP)": GCP.src,
+    "AWS Lambda": Lambda.src,
+    Git: Git.src,
+    Webpack: Webpack.src,
+    Babel: Babel.src,
+    JSON: JSON.src,
+
+    Stripe: Stripe.src,
+    Pinata: pinata.src,
+    Viem: viem.src,
+  };
+
+  // final categories
+  const categories: SkillCategory[] = [
+    {
+      title: "Frontend",
+      skills: [
+        { name: "React", src: ICON["React"] },
+        { name: "Next.js", src: ICON["Next.js"] },
+        { name: "Tailwind CSS", src: ICON["Tailwind CSS"] },
+        { name: "Material UI", src: ICON["Material UI"] },
+        { name: "Redux", src: ICON["Redux"] },
+      ],
+    },
+    {
+      title: "Languages",
+      skills: [
+        { name: "TypeScript", src: ICON["TypeScript"] },
+        { name: "JavaScript", src: ICON["JavaScript"] },
+        { name: "Python", src: ICON["Python"] },
+        { name: "Ruby", src: ICON["Ruby"] },
+      ],
+    },
+    {
+      title: "Backend & APIs",
+      skills: [
+        { name: "Node.js", src: ICON["Node.js"] },
+        { name: "Express.js", src: ICON["Express.js"] },
+        { name: "FastAPI", src: ICON["FastAPI"] },
+        { name: "Rails", src: ICON["Rails"] },
+      ],
+    },
+    {
+      title: "Databases & Data Layer",
+      skills: [
+        { name: "PostgreSQL", src: ICON["PostgreSQL"] },
+        { name: "MongoDB", src: ICON["MongoDB"] },
+        { name: "Mongoose", src: ICON["Mongoose"] },
+        { name: "DynamoDB", src: ICON["DynamoDB"] },
+        { name: "Firebase", src: ICON["Firebase"] },
+        { name: "Firestore", src: ICON["Firestore"] },
+        { name: "Convex", src: ICON["Convex"] },
+        { name: "SQLAlchemy", src: ICON["SQLAlchemy"] },
+      ],
+    },
+    {
+      title: "AI & Data",
+      skills: [
+        { name: "OpenAI", src: ICON["OpenAI"] },
+        { name: "LangChain", src: ICON["LangChain"] },
+        { name: "Pinecone", src: ICON["Pinecone"] },
+        { name: "Jupyter", src: ICON["Jupyter"] },
+      ],
+    },
+    {
+      title: "Cloud & DevOps",
+      skills: [
+        { name: "AWS", src: ICON["AWS"] },
+        { name: "Google Cloud (GCP)", src: ICON["Google Cloud (GCP)"] },
+        { name: "AWS Lambda", src: ICON["AWS Lambda"] },
+        { name: "Git", src: ICON["Git"] },
+        { name: "Webpack", src: ICON["Webpack"] },
+        { name: "Babel", src: ICON["Babel"] },
+        { name: "JSON", src: ICON["JSON"] },
+      ],
+    },
+    {
+      title: "Web3 & Commerce",
+      skills: [
+        { name: "Viem", src: ICON["Viem"] },
+        { name: "Pinata", src: ICON["Pinata"] },
+        { name: "Stripe", src: ICON["Stripe"] },
+      ],
+    },
+  ];
+
   return (
     <main className="section main bg-[#020617]">
       {showPopup ? (
@@ -78,9 +252,23 @@ export default function Home() {
             id="skills"
             className="section skills bg-[#020617] h-[20rem] "
           >
-            <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
-              Skills
-            </h2>
+            <button
+              onClick={() => setOpen(true)}
+              className="mx-auto block text-center"
+              aria-haspopup="dialog"
+              aria-expanded={open}
+              aria-controls="skills-modal"
+            >
+              <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg hover:text-white/90 transition">
+                Skills
+              </h2>
+            </button>
+            <SkillsModal
+              open={open}
+              onClose={() => setOpen(false)}
+              categories={categories}
+            />
+
             <InfiniteMovingCardsDemo />
           </section>
           <section

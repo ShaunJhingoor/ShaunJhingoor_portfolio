@@ -35,6 +35,7 @@ import pinata from "../../assets/pinata.png";
 import viem from "../../assets/viem.png";
 import fastapi from "../../assets/fastapi.png";
 import sqlAlchemy from "../../assets/sqlAlchemy.png";
+import huggingFace from "../../assets/hugging-face.png";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -162,6 +163,10 @@ export function InfiniteMovingCardsDemo() {
     {
       src: OpenAI.src,
       name: "OpenAI",
+    },
+    {
+      src: huggingFace.src,
+      name: "Hugging Face",
     },
     {
       src: Langchain.src,
