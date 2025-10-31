@@ -245,8 +245,11 @@ export default function Home() {
               aria-expanded={open}
               aria-controls="skills-modal"
             >
-              <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg hover:text-white/90 transition">
-                Skills
+              <h2 className="relative group section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg hover:text-white/90 transition">
+                <span className="relative inline-block">
+                  Skills
+                  <span className="absolute left-0 bottom-0 h-[3px] w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+                </span>
               </h2>
             </button>
             <SkillsModal
