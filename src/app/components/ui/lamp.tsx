@@ -79,11 +79,12 @@ export function LampDemo() {
             lineHeight: "1.75",
           }}
         >
-          Innovative coding professional with Biology/Healthcare background.
-          Demonstrated ability to meet deadlines consistently. Driven by
-          determination; thrives under high-stress situations. Ready to commit
-          to a company dedicated to helping others and provide advanced
-          solutions.
+          Innovative Full-Stack Software Engineer specializing in AI-powered and
+          Web3 applications. Experienced in building scalable, production-ready
+          platforms using Next.js, TypeScript, AWS, and blockchain integrations.
+          Combines startup agility with a strong foundation in cloud
+          infrastructure, automation, and user-centric design to deliver
+          impactful, future-ready digital experiences.
         </p>
         <div>
           <Modal>
