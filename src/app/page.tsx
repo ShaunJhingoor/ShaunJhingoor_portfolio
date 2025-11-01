@@ -1,6 +1,5 @@
 "use client";
 import NavBar from "./components/ui/navbar-menu";
-import SparklesCore from "./components/ui/Sparkles";
 import { LampDemo } from "./components/ui/lamp";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -53,16 +52,16 @@ import fastapi from "./assets/fastapi.png";
 import sqlAlchemy from "./assets/sqlAlchemy.png";
 import reactPic from "./assets/react.png";
 import huggingFace from "./assets/hugging-face.png";
+import FallingCore from "./components/ui/dropping";
 
 const Popup = () => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
-      <SparklesCore
-        background="#000000"
-        particleDensity={50}
-        minSize={1}
-        maxSize={3}
-        speed={5}
+      <FallingCore
+        background="transparent"
+        density={8}
+        speed={0.15}
+        vanishYPercent={50}
       />
       <div className="absolute flex items-center justify-center inset-0">
         <div className="text-center">
