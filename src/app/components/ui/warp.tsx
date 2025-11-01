@@ -1,4 +1,3 @@
-// components/ui/BackgroundBurst.tsx
 "use client";
 
 import dynamic from "next/dynamic";
