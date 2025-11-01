@@ -58,7 +58,7 @@ const FallingCore = ({
             particles: {
               number: { value: 0 },
               shape: { type: "circle" },
-              size: { value: { min: 0.35, max: 0.8 } },
+              size: { value: { min: 0.5, max: 1 } },
               opacity: { value: 1 },
               color: {
                 value: [

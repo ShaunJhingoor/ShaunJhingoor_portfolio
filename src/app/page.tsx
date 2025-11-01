@@ -70,6 +70,7 @@ const Popup = () => {
             duration={1000}
             className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg"
           />
+          <div className=" text-white text-md ">Let’s build something cool</div>
         </div>
       </div>
     </div>
