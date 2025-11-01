@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import * as THREE from "three";
-import { useMemo, useRef } from "react";
+import { useRef } from "react";
 import { shaderMaterial } from "@react-three/drei";
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 
