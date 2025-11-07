@@ -53,6 +53,67 @@ import sqlAlchemy from "./assets/sqlAlchemy.png";
 import reactPic from "./assets/react.png";
 import huggingFace from "./assets/hugging-face.png";
 import FallingCore from "./components/ui/dropping";
+type MiniProject = {
+  title: string;
+  blurb: string;
+  tags: string[];
+  links?: { label: "GitHub" | "Live"; href: string }[];
+};
+
+const miniProjects: MiniProject[] = [
+  {
+    title: "AI Flight Finder",
+    blurb:
+      "An AI-powered travel agent that searches for affordable flights and builds custom trip plans.",
+    tags: ["Next.js", "Tailwind", "OpenAI", "Amadeus"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/ShaunJhingoor/Flight-finder",
+      },
+      { label: "Live", href: "https://flight-finder-one.vercel.app/" },
+    ],
+  },
+  {
+    title: "CODA Helper",
+    blurb:
+      "A RAG-based chatbot that ingests shared links and delivers context-aware answers.",
+    tags: ["Next.js", "Tailwind", "OpenAI", "Pinecone", "HuggingFace"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/ShaunJhingoor/CODA-HELPER",
+      },
+      { label: "Live", href: "https://coda-helper.vercel.app/" },
+    ],
+  },
+  {
+    title: "Snake Game",
+    blurb:
+      "A classic snake game built in vanilla JavaScript with a focus on clean design and smooth animations.",
+    tags: ["Canvas", "Vanilla JS", "CSS"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/ShaunJhingoor/snake",
+      },
+      { label: "Live", href: "https://snake-gamma-nine.vercel.app/" },
+    ],
+  },
+  {
+    title: "My Storybook Portfolio",
+    blurb:
+      "An interactive, story-driven portfolio showcasing my journey, projects, and creative direction.",
+    tags: ["Next.js", "Tailwind"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/ShaunJhingoor/storyBook-portfilio",
+      },
+      { label: "Live", href: "https://story-book-portfolio.vercel.app/" },
+    ],
+  },
+];
 
 const Popup = () => {
   return (
@@ -477,6 +538,79 @@ export default function Home() {
               </CardContainer>
             </div>
           </section>
+          <section
+            id="explorations"
+            className="section bg-[#020617] mt-[6rem] mb-[6rem]"
+            aria-labelledby="explorations-title"
+          >
+            <h2
+              id="explorations-title"
+              className="section__title text-4xl md:text-5xl font-bold mb-6 text-center text-white pb-4 drop-shadow-lg group"
+            >
+              <span className="relative inline-block">Explorations</span>
+            </h2>
+
+            <p className="text-center text-white/60 max-w-2xl mx-auto mb-8">
+              Small spikes, playful prototypes, and weekend experiments.
+            </p>
+
+            <div
+              className="
+      mx-auto grid max-w-6xl gap-5
+      grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+    "
+            >
+              {miniProjects.map((p) => (
+                <article
+                  key={p.title}
+                  className="
+          rounded-2xl border border-white/10 bg-white/5
+          p-4 backdrop-blur
+          hover:bg-white/[0.07] transition
+        "
+                >
+                  <header className="flex items-start justify-between gap-3">
+                    <h3 className="text-white font-semibold">{p.title}</h3>
+                    {p.links?.length ? (
+                      <div className="flex items-center gap-3 text-white/70">
+                        {p.links.map((l) => (
+                          <a
+                            key={l.href}
+                            href={l.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm hover:text-white"
+                            aria-label={l.label}
+                            title={l.label}
+                          >
+                            {l.label === "GitHub" ? (
+                              <i className="fab fa-github" />
+                            ) : (
+                              <i className="fas fa-external-link-alt" />
+                            )}
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
+                  </header>
+
+                  <p className="text-white/70 text-sm mt-2">{p.blurb}</p>
+
+                  <ul className="flex flex-wrap gap-2 mt-3">
+                    {p.tags.map((t) => (
+                      <li
+                        key={t}
+                        className="text-[11px] tracking-wide uppercase text-white/70 bg-white/10 px-2 py-1 rounded-md"
+                      >
+                        {t}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
           <section id="hackathon">
             <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
               Hackathon
