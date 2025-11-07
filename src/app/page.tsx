@@ -91,7 +91,7 @@ const miniProjects: MiniProject[] = [
     title: "Snake Game",
     blurb:
       "A classic snake game built in vanilla JavaScript with a focus on clean design and smooth animations.",
-    tags: ["Canvas", "Vanilla JS", "CSS"],
+    tags: ["Canvas", "Vanilla JS", "CSS", "DOM Manipulation"],
     links: [
       {
         label: "GitHub",
