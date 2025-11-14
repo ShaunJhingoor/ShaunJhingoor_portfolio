@@ -551,7 +551,7 @@ export default function Home() {
             </h2>
 
             <p className="text-center text-white/60 max-w-2xl mx-auto mb-8">
-              Small spikes, playful prototypes, and weekend experiments.
+              Exploring new ideas through hands-on builds.
             </p>
 
             <div
