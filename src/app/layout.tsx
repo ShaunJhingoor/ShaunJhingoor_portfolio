@@ -18,6 +18,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta property="og:title" content="My Storybook Portfolio" />
+        <meta
+          property="og:description"
+          content="A collection of my projects across AI, Web3, and full-stack development."
+        />
+        <meta
+          property="og:image"
+          content="https://story-book-portfolio.s3.us-west-2.amazonaws.com/portfoliobanner.png"
+        />
+
+        <meta
+          property="og:url"
+          content="https://shaun-jhingoor-portfolio.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
         <meta name="theme-color" content="#000a1f" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
