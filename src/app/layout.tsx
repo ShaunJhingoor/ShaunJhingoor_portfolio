@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta property="og:title" content="My Storybook Portfolio" />
+        <meta property="og:title" content="Shaun Jhingoor Portfolio" />
         <meta
           property="og:description"
           content="A collection of my projects across AI, Web3, and full-stack development."
