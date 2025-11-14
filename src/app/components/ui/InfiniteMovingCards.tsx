@@ -36,6 +36,7 @@ import viem from "../../assets/viem.png";
 import fastapi from "../../assets/fastapi.png";
 import sqlAlchemy from "../../assets/sqlAlchemy.png";
 import huggingFace from "../../assets/hugging-face.png";
+import pytest from "../../assets/pytest.png";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -183,6 +184,10 @@ export function InfiniteMovingCardsDemo() {
     {
       src: viem.src,
       name: "Viem",
+    },
+    {
+      src: pytest.src,
+      name: "Pytest",
     },
   ];
 
