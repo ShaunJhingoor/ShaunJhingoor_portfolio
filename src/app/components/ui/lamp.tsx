@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../lib/utils";
-import profile from "../../assets/image.png";
+import profile from "../../assets/me.jpg";
 import { useState } from "react";
 import { useEffect } from "react";
 import { ModalTrigger, ModalContent, Modal } from "./animated-modal";
