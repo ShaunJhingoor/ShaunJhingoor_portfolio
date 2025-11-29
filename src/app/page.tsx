@@ -53,6 +53,7 @@ import sqlAlchemy from "./assets/sqlAlchemy.png";
 import reactPic from "./assets/react.png";
 import huggingFace from "./assets/hugging-face.png";
 import FallingCore from "./components/ui/dropping";
+import pytest from "./assets/pytest.png";
 type MiniProject = {
   title: string;
   blurb: string;
@@ -205,6 +206,7 @@ export default function Home() {
     Webpack: Webpack.src,
     Babel: Babel.src,
     JSON: JSON.src,
+    Pytest: pytest.src,
 
     Stripe: Stripe.src,
     Pinata: pinata.src,
@@ -273,6 +275,7 @@ export default function Home() {
         { name: "Webpack", src: ICON["Webpack"] },
         { name: "Babel", src: ICON["Babel"] },
         { name: "JSON", src: ICON["JSON"] },
+        { name: "Pytest", src: ICON["Pytest"] },
       ],
     },
     {
