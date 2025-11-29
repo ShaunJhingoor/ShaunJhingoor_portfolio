@@ -37,6 +37,8 @@ import fastapi from "../../assets/fastapi.png";
 import sqlAlchemy from "../../assets/sqlAlchemy.png";
 import huggingFace from "../../assets/hugging-face.png";
 import pytest from "../../assets/pytest.png";
+import ether from "../../assets/ethers.png";
+import docker from "../../assets/docker.png";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -104,6 +106,10 @@ export function InfiniteMovingCardsDemo() {
     {
       src: sqlAlchemy.src,
       name: "SQLAlchemy",
+    },
+    {
+      src: docker.src,
+      name: "Docker",
     },
     {
       src: fastapi.src,
@@ -184,6 +190,10 @@ export function InfiniteMovingCardsDemo() {
     {
       src: viem.src,
       name: "Viem",
+    },
+    {
+      src: ether.src,
+      name: "Ether",
     },
     {
       src: pytest.src,

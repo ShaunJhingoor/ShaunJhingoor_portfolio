@@ -54,6 +54,8 @@ import reactPic from "./assets/react.png";
 import huggingFace from "./assets/hugging-face.png";
 import FallingCore from "./components/ui/dropping";
 import pytest from "./assets/pytest.png";
+import Ethers from "./assets/ethers.png";
+import docker from "./assets/docker.png";
 type MiniProject = {
   title: string;
   blurb: string;
@@ -202,6 +204,7 @@ export default function Home() {
     AWS: AWS.src,
     "Google Cloud (GCP)": GCP.src,
     "AWS Lambda": Lambda.src,
+    Docker: docker.src,
     Git: Git.src,
     Webpack: Webpack.src,
     Babel: Babel.src,
@@ -211,6 +214,7 @@ export default function Home() {
     Stripe: Stripe.src,
     Pinata: pinata.src,
     Viem: viem.src,
+    Ether: Ethers.src,
   };
 
   const categories: SkillCategory[] = [
@@ -271,6 +275,7 @@ export default function Home() {
         { name: "AWS", src: ICON["AWS"] },
         { name: "Google Cloud (GCP)", src: ICON["Google Cloud (GCP)"] },
         { name: "AWS Lambda", src: ICON["AWS Lambda"] },
+        { name: "Docker", src: ICON["Docker"] },
         { name: "Git", src: ICON["Git"] },
         { name: "Webpack", src: ICON["Webpack"] },
         { name: "Babel", src: ICON["Babel"] },
@@ -282,6 +287,7 @@ export default function Home() {
       title: "Web3 & Commerce",
       skills: [
         { name: "Viem", src: ICON["Viem"] },
+        { name: "Ether", src: ICON["Ether"] },
         { name: "Pinata", src: ICON["Pinata"] },
         { name: "Stripe", src: ICON["Stripe"] },
       ],
