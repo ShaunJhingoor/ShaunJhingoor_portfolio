@@ -39,6 +39,7 @@ import huggingFace from "../../assets/hugging-face.png";
 import pytest from "../../assets/pytest.png";
 import ether from "../../assets/ethers.png";
 import docker from "../../assets/docker.png";
+import tensorflow from "../../assets/tensorflow.png";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
@@ -174,6 +175,10 @@ export function InfiniteMovingCardsDemo() {
     {
       src: huggingFace.src,
       name: "Hugging Face",
+    },
+    {
+      src: tensorflow.src,
+      name: "TensorFlow",
     },
     {
       src: Langchain.src,
