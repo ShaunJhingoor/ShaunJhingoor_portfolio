@@ -116,6 +116,26 @@ const miniProjects: MiniProject[] = [
       { label: "Live", href: "https://story-book-portfolio.vercel.app/" },
     ],
   },
+  {
+    title: "AI Background Remover (Prototype)",
+    blurb:
+      "Browser-based video background removal using TensorFlow.js + MediaPipe Selfie Segmentation. Exports a transparent WEBM. Still improving edge quality (hair/hands) + speed on longer clips.",
+    tags: [
+      "Next.js",
+      "Tailwind",
+      "TensorFlow.js",
+      "MediaPipe",
+      "WebGL",
+      "Canvas",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/ShaunJhingoor/ai-rembg-frontend",
+      },
+      { label: "Live", href: "https://ai-rembg.vercel.app/" },
+    ],
+  },
 ];
 
 const Popup = () => {
