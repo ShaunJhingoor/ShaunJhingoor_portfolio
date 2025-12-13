@@ -375,7 +375,7 @@ export default function Home() {
             <InfiniteMovingCardsDemo />
           </section>
           <section
-            id="headstarter"
+            id="projects"
             className="section headstarter bg-[#020617] mb-[10rem] mt-[5rem]"
           >
             <h2 className="section__title text-4xl mb-[5vh] md:text-5xl font-bold  text-center text-white pb-4 drop-shadow-lg">
@@ -384,7 +384,7 @@ export default function Home() {
             <ExpandableCardDemo />
           </section>
 
-          <section id="projects" className="section projects bg-[#020617]">
+          <section className="section projects bg-[#020617]">
             <h2 className="section__title text-4xl md:text-5xl font-bold mb-8 text-center text-white pb-4 drop-shadow-lg">
               Projects
             </h2>
