@@ -136,6 +136,27 @@ const miniProjects: MiniProject[] = [
       { label: "Live", href: "https://ai-rembg.vercel.app/" },
     ],
   },
+  {
+    title: "Bloby",
+    blurb:
+      "A cute 3D emotional support blob built with Three.js + React Three Fiber. Chats with an LLM, speaks back with text-to-speech, mouth motion synced to audio, and includes sentiment + emotion analysis (session-only).",
+    tags: [
+      "Next.js",
+      "Tailwind",
+      "Three.js",
+      "React Three Fiber",
+      "OpenAI",
+      "TTS",
+      "Sentiment",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/ShaunJhingoor/support-blob",
+      },
+      { label: "Live", href: "https://support-blob.vercel.app/" },
+    ],
+  },
 ];
 
 const Popup = () => {
