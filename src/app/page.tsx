@@ -56,6 +56,7 @@ import FallingCore from "./components/ui/dropping";
 import pytest from "./assets/pytest.png";
 import Ethers from "./assets/ethers.png";
 import docker from "./assets/docker.png";
+import tensorflow from "./assets/tensorflow.png";
 type MiniProject = {
   title: string;
   blurb: string;
@@ -241,6 +242,7 @@ export default function Home() {
     Pinecone: Pinecone.src,
     Jupyter: Jupyter.src,
     "Hugging Face": huggingFace.src,
+    TensorFlow: tensorflow.src,
 
     AWS: AWS.src,
     "Google Cloud (GCP)": GCP.src,
@@ -308,6 +310,7 @@ export default function Home() {
         { name: "Pinecone", src: ICON["Pinecone"] },
         { name: "Hugging Face", src: ICON["Hugging Face"] },
         { name: "Jupyter", src: ICON["Jupyter"] },
+        { name: "TensorFlow", src: ICON["TensorFlow"] },
       ],
     },
     {
