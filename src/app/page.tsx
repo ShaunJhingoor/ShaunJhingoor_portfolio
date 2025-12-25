@@ -158,6 +158,29 @@ const miniProjects: MiniProject[] = [
       { label: "Live", href: "https://support-blob.vercel.app/" },
     ],
   },
+  {
+    title: "AI Job Finder",
+    blurb:
+      "Resume-to-Job matcher with automatic PDF parsing, keyword gap detection, AI scoring, resume upgrade coaching, and interview question prediction — all in JSON mode for consistent output.",
+    tags: [
+      "Next.js",
+      "Tailwind",
+      "OpenAI JSON Mode",
+      "PDF.js",
+      "LLM Scoring",
+      "Career Tools",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/ShaunJhingoor/ai-job-finder",
+      },
+      {
+        label: "Live",
+        href: "https://ai-job-finder-ruddy.vercel.app/",
+      },
+    ],
+  },
 ];
 
 const Popup = () => {
