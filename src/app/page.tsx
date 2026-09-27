@@ -590,7 +590,7 @@ export default function Home() {
                     </div>
                     <div className="icon-container">
                       <a
-                        href="https://github.com/erklee/TeamMates"
+                        href="https://github.com/ShaunJhingoor/TeamMates"
                         aria-label="source code"
                         className="link link--icon mt-4"
                         target="_blank"
