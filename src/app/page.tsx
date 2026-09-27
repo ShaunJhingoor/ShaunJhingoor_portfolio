@@ -598,7 +598,7 @@ export default function Home() {
                         <i aria-hidden="true" className="fab fa-github"></i>
                       </a>
                       <a
-                        href="https://teammates-ifn3.onrender.com/"
+                        href="https://team-mates-bay.vercel.app/"
                         aria-label="live preview"
                         className="link link--icon mt-2"
                         target="_blank"
