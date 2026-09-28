@@ -518,6 +518,7 @@ export default function Home() {
                       <p id="project__stack-item">Rails</p>
                       <p id="project__stack-item">React</p>
                       <p id="project__stack-item">Redux</p>
+                      <p id="project__stack-item">Docker</p>
                       <p id="project__stack-item">AWS S3</p>
                       <p id="project__stack-item">Google Api</p>
                       <p id="project__stack-item">JavaScript</p>
