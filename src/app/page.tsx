@@ -529,7 +529,7 @@ export default function Home() {
                         <i aria-hidden="true" className="fab fa-github"></i>
                       </a>
                       <a
-                        href="https://alladventure.onrender.com/"
+                        href="https://alladventure.vercel.app/"
                         aria-label="live preview"
                         className="link link--icon mt-2"
                         target="_blank"
