@@ -22,6 +22,8 @@ import mongo from "./assets/mongo.png";
 import postgres from "./assets/Postgres.png";
 import typeScript from "./assets/typescript.png";
 import javascript from "./assets/javascript.png";
+import java from "./assets/java.png";
+import maven from "./assets/maven.png";
 import python from "./assets/python.png";
 import ruby from "./assets/ruby.png";
 import AWS from "./assets/aws1.png";
@@ -243,6 +245,7 @@ export default function Home() {
 
     TypeScript: typeScript.src,
     JavaScript: javascript.src,
+    Java: java.src,
     Python: python.src,
     Ruby: ruby.src,
 
@@ -276,6 +279,7 @@ export default function Home() {
     Babel: Babel.src,
     JSON: JSON.src,
     Pytest: pytest.src,
+    Maven: maven.src,
 
     Stripe: Stripe.src,
     Pinata: pinata.src,
@@ -299,6 +303,7 @@ export default function Home() {
       skills: [
         { name: "TypeScript", src: ICON["TypeScript"] },
         { name: "JavaScript", src: ICON["JavaScript"] },
+        { name: "Java", src: ICON["Java"] },
         { name: "Python", src: ICON["Python"] },
         { name: "Ruby", src: ICON["Ruby"] },
       ],
@@ -348,6 +353,7 @@ export default function Home() {
         { name: "Babel", src: ICON["Babel"] },
         { name: "JSON", src: ICON["JSON"] },
         { name: "Pytest", src: ICON["Pytest"] },
+        { name: "Maven", src: ICON["Maven"] },
       ],
     },
     {

@@ -7,6 +7,8 @@ import mongo from "../../assets/mongo.png";
 import postgres from "../../assets/Postgres.png";
 import typeScript from "../../assets/typescript.png";
 import javascript from "../../assets/javascript.png";
+import java from "../../assets/java.png";
+import maven from "../../assets/maven.png";
 import python from "../../assets/python.png";
 import ruby from "../../assets/ruby.png";
 import AWS from "../../assets/aws1.png";
@@ -125,6 +127,10 @@ export function InfiniteMovingCardsDemo() {
       name: "JavaScript",
     },
     {
+      src: java.src,
+      name: "Java",
+    },
+    {
       src: python.src,
       name: "Python",
     },
@@ -203,6 +209,10 @@ export function InfiniteMovingCardsDemo() {
     {
       src: pytest.src,
       name: "Pytest",
+    },
+    {
+      src: maven.src,
+      name: "Maven",
     },
   ];
 
